@@ -1,0 +1,4 @@
+## Files that we want to ignore
+.bin/*
+.vscode/*
+.vs/*
