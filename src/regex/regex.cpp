@@ -1,5 +1,5 @@
-#include "regex.h"
-#include "util.h"
+#include "regex.hpp"
+#include "util.hpp"
 
 std::vector<std::string> Regex::process(StringRef regex, StringRef string, MatchFlags flags)
 {
@@ -52,8 +52,7 @@ void Regex::addFlags(MatchFlags f)
 
 void Regex::assertConfig()
 {
-	// si erreur : pas de chaine de caractère ou pas de regex chargés
-	util::assertCondition(!string.empty() && !regex._Empty());
+	myAssert(!string.empty() && !regex._Empty(), "No character string or no regex loaded");
 }
 
 Regex::MatchFlags operator+(const Regex::MatchFlags& first, const Regex::MatchFlags& last)
