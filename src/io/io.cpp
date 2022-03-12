@@ -1,7 +1,7 @@
-#include "io.h"
+#include "../../header/io/io.h"
 #include <sstream>
 #include <fstream>
-#include "util.h"
+#include "../../header/util/util.h"
 
 std::string io::fileToString(const std::string& filePath)
 {
