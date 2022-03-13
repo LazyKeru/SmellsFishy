@@ -1,5 +1,5 @@
-#include "../../header/regex/regex.h"
-#include "../../header/util/util.h"
+#include "../../header/regex/regex.hpp"
+#include "../../header/util/util.hpp"
 
 std::vector<std::string> Regex::process(StringRef regex, StringRef string, MatchFlags flags)
 {
