@@ -3,12 +3,8 @@
 #include <string>
 #include <cassert>
 
-class Regex
+namespace Regex
 {
-	using StringRef = const std::string&;
-
-public:
-
 	// Flags specifying the matches we are looking for. Add them with the + operator
 	enum class MatchFlags : int
 	{
@@ -40,34 +36,19 @@ public:
 		prevAvailable = 0x0040,	
 	};
 
-	Regex() : currentFlags(MatchFlags::notBeginningOfLine) {}
-
-	/// <summary>
-	/// returns all the matches. Flags are optionnal.
-	/// </summary>
-	/// <returns>
-	/// returns a vector (a resizable array) elements can be accessed like a C array
-	/// <para>ex: vector[i] = 0 | use .size() to get its size</para>
-	/// </returns>
-	static std::vector<std::string> process(StringRef regex, StringRef string, MatchFlags flags = MatchFlags(0));
-
-	/// <summary>sets the string the regex has to analyze</summary>
-	void setString(StringRef s) { string = s; }
-
-	/// <summary>sets the regex parameter</summary>
-	void setRegex(StringRef r) { regex = r; }
+	std::vector<std::string> process(const std::string& regex, const std::string& string, MatchFlags flags = MatchFlags(0));
 
 	/// <summary>
 	/// returns true if the regex matches for a part of the string 
 	/// <para>example: regex = gr(a|e)y : "grey" -> true | "is grey" -> true</para>
 	/// </summary>
-	bool search();
+	bool search(const std::string& regex, const std::string& string, MatchFlags flags = MatchFlags(0));
 
 	/// <summary>
 	/// returns true if the regex matches for ALL the string 
 	/// <para>example: regex = gr(a|e)y : "grey" -> true | "is grey" -> false</para>
 	/// </summary>
-	bool match();
+	bool match(const std::string& regex, const std::string& string, MatchFlags flags = MatchFlags(0));
 
 	/// <summary>
 	/// returns all the matches
@@ -76,21 +57,10 @@ public:
 	/// returns a vector (a resizable array) elements can be accessed like a C array
 	/// <para>ex: vector[i] = 0 | use .size() to get its size</para>
 	/// </returns>
-	std::vector<std::string> findAll();
+	
+	std::vector<std::string> findAll(const std::string& regex, const std::string& string, MatchFlags flags = MatchFlags(0));
 
-	/// <summary>sets the match flags. Use '+' to add them</summary>
-	void setFlags(MatchFlags f);
 
-	/// <summary>adds new match flags keeping the old ones. Use '+' to add them</summary>
-	void addFlags(MatchFlags f);
-
-private:
-
-	void assertConfig();
-
-	MatchFlags currentFlags;
-	std::string string;
-	std::regex regex;
-};
+}
 
 Regex::MatchFlags operator+(const Regex::MatchFlags& first, const Regex::MatchFlags& last);

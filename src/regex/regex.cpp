@@ -1,34 +1,20 @@
 #include "../../header/regex/regex.hpp"
 #include "../../header/util/util.hpp"
 
-std::vector<std::string> Regex::process(StringRef regex, StringRef string, MatchFlags flags)
+bool Regex::search(const std::string& regex, const std::string& string, MatchFlags flags)
 {
-	Regex r;
-
-	r.setString(string);
-	r.setRegex(regex);
-	r.setFlags(flags);
-
-	return r.findAll();
+	return std::regex_search(string, std::regex(regex), std::regex_constants::match_flag_type(flags));
 }
 
-bool Regex::search()
+bool Regex::match(const std::string& regex, const std::string& string, MatchFlags flags)
 {
-	assertConfig();
-	return std::regex_search(string, regex, std::regex_constants::match_flag_type(currentFlags));
+	return std::regex_match(string, std::regex(regex), std::regex_constants::match_flag_type(flags));
 }
 
-bool Regex::match()
+std::vector<std::string> Regex::findAll(const std::string& regex, const std::string& string, MatchFlags flags)
 {
-	assertConfig();
-	return std::regex_match(string, regex, std::regex_constants::match_flag_type(currentFlags));
-}
-
-std::vector<std::string> Regex::findAll()
-{
-	assertConfig();
-
-	std::sregex_iterator begin(string.begin(), string.end(), regex);
+	std::regex r(regex);
+	std::sregex_iterator begin(string.begin(), string.end(), r);
 	std::sregex_iterator end;
 
 	std::vector<std::string> v;
@@ -39,21 +25,6 @@ std::vector<std::string> Regex::findAll()
 
 	return v;
 }
-
-void Regex::setFlags(MatchFlags f)
-{
-	currentFlags = f;
-}
-
-void Regex::addFlags(MatchFlags f)
-{
-	currentFlags = currentFlags + f;
-}
-
-void Regex::assertConfig()
-{
-	myAssert(!string.empty(), "No character string or no regex loaded");
-} // Condition : !string.empty() && !regex._Empty() // Not working
 
 Regex::MatchFlags operator+(const Regex::MatchFlags& first, const Regex::MatchFlags& last)
 {
