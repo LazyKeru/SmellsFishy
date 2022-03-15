@@ -25,7 +25,7 @@ else
 endif
 
 # Variables for tools
-CXXFLAGS:= -Wall
+CXXFLAGS:= -Wall -g
 INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
