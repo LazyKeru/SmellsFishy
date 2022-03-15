@@ -52,8 +52,8 @@ void Regex::addFlags(MatchFlags f)
 
 void Regex::assertConfig()
 {
-	myAssert(!string.empty() && !regex._Empty(), "No character string or no regex loaded");
-}
+	myAssert(!string.empty(), "No character string or no regex loaded");
+} // Condition : !string.empty() && !regex._Empty() // Not working
 
 Regex::MatchFlags operator+(const Regex::MatchFlags& first, const Regex::MatchFlags& last)
 {

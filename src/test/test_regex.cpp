@@ -1,6 +1,5 @@
-#include "../../header/regex/regex.hpp"
 #include "../../header/test/test.hpp"
-
+#include "../../header/regex/regex.hpp"
 
 /**
  * @brief To be written

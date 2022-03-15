@@ -1,0 +1,7 @@
+test: ${BIN_DIR}test
+
+${BIN_DIR}/test: ${OBJ_TEST_LIST} | ${BIN_DIR}
+	${CXX} $(CXXFLAGS) $(CXXINCLUDES) $^ -o $(output)
+
+${BUILD_DIR}%.o: ${SRC_LIST}/*/%.c
+	${CXX} $(CXXFLAGS) $(CXXINCLUDES) -c $(input) -o $(output)
