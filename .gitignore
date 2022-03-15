@@ -1,5 +1,3 @@
 ## Files that we want to ignore
-build/*
-bin/*
 vscode/*
 vs/*
