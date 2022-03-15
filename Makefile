@@ -25,16 +25,17 @@ else
 endif
 
 # Variables for tools
-CXXFLAGS:= -Wall
+CXXFLAGS:= -Wall -g -std=c++17
+LDFLAGS:= -Wall -g -std=c++17
 INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
 
 test: $(OBJ_SRC_LIST) $(OBJ_TEST_LIST)
-	${LD} $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) -o $(BIN_DIR)$@
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) -o $(BIN_DIR)$@
 
-main: $(OBJ_SRC_LIST) $(MAIN_LIST)
-	${LD} $(OBJ_SRC_LIST) $(MAIN_LIST) -o $(BIN_DIR)$@
+main: $(OBJ_SRC_LIST) $(OBJ_MAIN_LIST)
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(MAIN_LIST) -o $(BIN_DIR)$@
 
 # Compile the cpp files
 ${BUILD_DIR}%.o: ${SRC_DIR}*/%.cpp 
