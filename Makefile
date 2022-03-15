@@ -15,11 +15,12 @@ OBJ_MAIN_LIST := $(addprefix $(BUILD_DIR), $(notdir $(MAIN_LIST:.cpp=.o)))
 OBJ_TEST_LIST := $(addprefix $(BUILD_DIR), $(notdir $(TEST_LIST:.cpp=.o)))
 OBJ_SRC_LIST := $(addprefix $(BUILD_DIR), $(notdir $(SRC_LIST:.cpp=.o)))
 
+# Looking at the OS to define or RM function 
 ifdef OS
-   RM = del /Q *.o
+   RM = del /Q *.o *.exe
 else
    ifeq ($(shell uname), Linux)
-      RM = rm -f *.o 
+      RM = rm -f *.o *.exe 
    endif
 endif
 
@@ -29,23 +30,27 @@ INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
 
-test: compile_src compile_test
-	${LD} $(notdir $(TEST_LIST:.cpp=.o)) $(notdir $(SRC_LIST:.cpp=.o)) -o $(BIN_DIR)/$@
+test: $(OBJ_SRC_LIST) $(OBJ_TEST_LIST)
+	${LD} $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) -o $(BIN_DIR)/$@
 
-main: compile_src compile_main
-	${LD} $(notdir $(OBJ_MAIN_LIST:.cpp=.o)) $(notdir $(SRC_LIST:.cpp=.o)) -o $(BIN_DIR)/$@
+main: $(OBJ_SRC_LIST) $(MAIN_LIST)
+	${LD} $(OBJ_SRC_LIST) $(MAIN_LIST) -o $(BIN_DIR)/$@
 
-# As of now it builds in root
-compile_src:
-	$(CXX) $(CXXFLAGS) -c $(SRC_LIST)
+# Compile the cpp files
+${BUILD_DIR}%.o: ${SRC_DIR}*/%.cpp 
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+# Compile the main files
+${BUILD_DIR}main.o: ${SRC_DIR}main.cpp 
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# As of now it builds in root
-compile_test:
-	$(CXX) $(CXXFLAGS) -c $(TEST_LIST)
 
-# As of now it builds in root
-compile_main:
-	$(CXX) $(CXXFLAGS) -c $(MAIN_LIST)
+SUBDIRS:= ${BUILD_DIR} ${BIN_DIR}
+SUBDIRSCLEAN:=$(addsuffix clean,$(SUBDIRS))
 
-clean:
+clean: $(SUBDIRSCLEAN)
+
+clean_curdir:
 	$(RM)
+
+%clean: %
+	$(MAKE) -C $< -f ../Makefile clean_curdir
