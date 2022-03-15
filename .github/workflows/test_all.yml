@@ -16,4 +16,4 @@ jobs:
   - name: build application
     run: make test
   - name: test all
-    run: bin/test.exe all
+    run: bin/test all
