@@ -1,0 +1,22 @@
+name: Test-all
+
+# Run the workflow when a Pull Request is opened or when changes are pushed to master
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [review_requested]
+
+jobs:
+ release:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+    with:
+      ref: ${{ secrets.GITHUB_REF }}
+  - name: build application
+    run: make test
+  - name: test all
+    run: bin/test all
