@@ -1,0 +1,8 @@
+## Files that we want to ignore
+build/*
+bin/*
+vscode/*
+vs/*
+## Exception
+!build/README.md
+!bin/README.md
