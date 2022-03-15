@@ -33,7 +33,7 @@ test: compile_src compile_test
 	${LD} $(notdir $(TEST_LIST:.cpp=.o)) $(notdir $(SRC_LIST:.cpp=.o)) -o $(BIN_DIR)/$@
 
 main: compile_src compile_main
-	${LD} $(notdir $(TEST_LIST:.cpp=.o)) $(notdir $(SRC_LIST:.cpp=.o)) -o $(BIN_DIR)/$@
+	${LD} $(notdir $(OBJ_MAIN_LIST:.cpp=.o)) $(notdir $(SRC_LIST:.cpp=.o)) -o $(BIN_DIR)/$@
 
 # As of now it builds in root
 compile_src:
