@@ -1,9 +1,9 @@
 /************************/
 /**     Libraries      **/
 /************************/
-#include <String>
-#include <Map>
-#include <Cmath>
+#include <string>
+#include <map>
+#include <cmath>
 /************************/
 /**     Functions      **/
 /************************/
