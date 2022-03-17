@@ -12,8 +12,8 @@
 /**************************/
 /* CONST                  */
 /**************************/
-#define PHRASE "This is an outrageous test"
-#define EXPECTED_VALUE 3.51
+constexpr char* PHRASE = "This is an outrageous test";
+constexpr double EXPECTED_VALUE = 3.51;
 
 bool test::entropy()
 {

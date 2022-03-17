@@ -1,5 +1,5 @@
 /************************/
-/**     Libraries      **/
+/**      Includes      **/
 /************************/
 #include <string>
 #include <map>
@@ -12,25 +12,25 @@ namespace Entropy
     /**
      * @brief Function to check if a string entropy fits between two value
      * 
-     * @param _string The string we want to calculate the entropy of
+     * @param _string The address of the string we want to calculate the entropy of
      * @param entropy_min The minimum entropy the string must have
      * @param entropy_max The maximum entropy the string must have
      * @return true 
      * @return false 
      */
     bool stringFitEntropy(
-        std::string _string,
+        const std::string& _string,
         double entropy_min,
         double entropy_max
     );
     /**
      * @brief Function to calculate the entropy of a string 
      * 
-     * @param _string The string we want to calculate the entropy of
+     * @param _string The address of the string we want to calculate the entropy of
      * @return double 
      */
     double entropy(
-        std::string _string 
+        const std::string& _string 
     );
     /**
      * @brief Calcule the log of base "base" for x

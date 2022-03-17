@@ -1,6 +1,6 @@
 #include "../../header/entropy/entropy.hpp"
 
-bool Entropy::stringFitEntropy(std::string _string, double entropy_min, double entropy_max){
+bool Entropy::stringFitEntropy(const std::string& _string, double entropy_min, double entropy_max){
     // Checking if the parameters are valid
     if(entropy_min>=entropy_max)
         return false;
@@ -13,7 +13,7 @@ bool Entropy::stringFitEntropy(std::string _string, double entropy_min, double e
     return false;
 }
 
-double Entropy::entropy(std::string _string){
+double Entropy::entropy(const std::string& _string){
     std::map<char, int> frequencies;
     // looping threw the frequencies
     for (size_t i = 0; i < _string.size(); i++)
@@ -28,7 +28,7 @@ double Entropy::entropy(std::string _string){
         res += Px * Entropy::local_log(Px);
     }
     res *= -1;
-    return (double) res;
+    return res;
 }
 
 double Entropy::local_log(double x, double base){
