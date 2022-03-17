@@ -1,5 +1,5 @@
 #include "../../header/test/test.hpp"
-#include "../../header/fileToString/fileToString.hpp"
+#include "../../header/files/fileToString.hpp"
 
 /**
  * @brief To be written

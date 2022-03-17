@@ -1,4 +1,4 @@
-#include "../../header/fileToString/fileToString.hpp"
+#include "../../header/files/fileToString.hpp"
 #include <sstream>
 #include <fstream>
 #include "../../header/util/util.hpp"
