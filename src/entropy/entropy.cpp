@@ -1,4 +1,4 @@
-#include "entropy.hpp"
+#include "../../header/entropy/entropy.hpp"
 
 bool Entropy::stringFitEntropy(std::string _string, double entropy_min, double entropy_max){
     // Checking if the parameters are valid
@@ -7,7 +7,7 @@ bool Entropy::stringFitEntropy(std::string _string, double entropy_min, double e
     // Calculating the entropy of the string
     double _stringEntropy = Entropy::entropy(_string);
     // Checking if _stringEntropy fits between entropy_min and entropy_max
-    if((_stringEntropy >= entropy_min) && (_stringEntropy >= entropy_max))
+    if((_stringEntropy >= entropy_min) && (_stringEntropy <= entropy_max))
         return true;
     // Default response
     return false;
@@ -28,10 +28,10 @@ double Entropy::entropy(std::string _string){
         res += Px * Entropy::local_log(Px);
     }
     res *= -1;
-    return;
+    return (double) res;
 }
 
-double Entropy::local_log(double x, double base = 2){
+double Entropy::local_log(double x, double base){
     // log b (x) = ln(x) / ln(base)
-    return log(x) / log(base);
+    return (double) log(x) / log(base);
 }

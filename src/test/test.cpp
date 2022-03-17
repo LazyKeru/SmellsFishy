@@ -1,5 +1,5 @@
-#include <iostream>
 #include "../../header/test/test.hpp"
+#include <iostream>
 
 int main(int argc, const char* argv[])
 {
@@ -19,13 +19,21 @@ int main(int argc, const char* argv[])
 			std::cout << "Testing regex...\n";
 			test::regex();
 		}
-		else if (s == "entropy") {
-			std::cout << "Testing entropy...\n";
-			
-		}
 		else if (s == "file_read") {
 			std::cout << "Testing file_read...\n";
 			test::fileToString();
+		}
+		else if (s == "entropy") {
+			std::cout << "Testing entropy...\n";
+			bool res = test::entropy();
+			if(res==false){
+				std::cout << "Error: Entropy function seems to be broken";
+				throw;
+				// Safeguard
+				return -1;
+			}
+			std::cout << "Entropy is working";
+			return 0;
 		}
 	}
 }

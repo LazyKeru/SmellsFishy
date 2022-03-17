@@ -41,6 +41,6 @@ namespace Entropy
      */
     double local_log(
         double x, 
-        double base = 2
+        double base  = 2
     );
 } // namespace name
