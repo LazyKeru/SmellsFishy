@@ -15,5 +15,5 @@ namespace test
      * @return true 
      * @return false 
      */
-    bool fileToString();
+    bool files();
 }

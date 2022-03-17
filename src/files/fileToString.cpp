@@ -4,7 +4,7 @@
 #include "../../header/util/util.hpp"
 
 
-std::string fileToString(const std::string& filePath)
+std::string Files::fileToString(const std::string& filePath)
 {
 	std::ifstream file;
 	file.open(filePath);
