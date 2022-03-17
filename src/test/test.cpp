@@ -11,7 +11,7 @@ int main(int argc, const char* argv[])
 		if (s == "all") {
 			std::cout << "Testing all...\n";
 			test::regex();
-			test::fileToString();
+			test::files();
 
 			return 0;
 		}
@@ -25,7 +25,7 @@ int main(int argc, const char* argv[])
 		}
 		else if (s == "file_read") {
 			std::cout << "Testing file_read...\n";
-			test::fileToString();
+			test::files();
 		}
 	}
 }

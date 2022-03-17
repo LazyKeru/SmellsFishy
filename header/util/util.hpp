@@ -1,4 +1,5 @@
 #pragma once
+#include <random>
 
 #ifndef NDEBUG
 #   define myAssert(Condition, Error_Message) \
@@ -17,3 +18,11 @@
  * @param line pointer to a char table. The line _myAssert was called
  */
 void _myAssert(const char* expected_expression, const char* error_message, bool condition, const char* file, int line);
+
+template <typename T>
+T randomValue(T min, T max)
+{
+    static std::uniform_real_distribution<double> distribution(min, max);
+    static std::mt19937 generator;
+    return distribution(generator);
+}
