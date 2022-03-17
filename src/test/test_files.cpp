@@ -47,8 +47,6 @@ void deleteTestFiles(const std::string &path)
 
 bool test::files()
 {
-    std::cout << "[TestFiles]log: In the test files\n";
-    
     auto root = "../../FilesTest";
     auto s = "En informatique, une expression régulière ou expression rationnelle1 ou expression normalenote 1 ou motif est une chaîne de caractères qui décrit,"
              "selon une syntaxe précise, un ensemble de chaînes de caractères possibles. Les expressions régulières sont également appelées regex (un mot-valise formé depuis"
