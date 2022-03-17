@@ -8,22 +8,15 @@ int main(int argc, const char* argv[])
 	{
 		std::string s(argv[i]);
 
-		if (s == "all") {
-			std::cout << "Testing all...\n";
-			test::regex();
-			test::fileToString();
-
-			return 0;
-		}
-		else if (s == "regex") {
+		if (s == "regex" || s == "all") {
 			std::cout << "Testing regex...\n";
 			test::regex();
 		}
-		else if (s == "file_read") {
+		if (s == "file_read" || s == "all") {
 			std::cout << "Testing file_read...\n";
 			test::fileToString();
 		}
-		else if (s == "entropy") {
+		if (s == "entropy" || s == "all") {
 			std::cout << "Testing entropy...\n";
 			bool res = test::entropy();
 			if(res==false){
