@@ -3,6 +3,7 @@ build/*
 bin/*
 .vscode/*
 .vs/*
+*.vcxproj*
 ## Exception
 !build/README.md
 !bin/README.md
