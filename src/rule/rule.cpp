@@ -1,19 +1,19 @@
 #include "../../header/rule/rule.hpp"
 
-rule::rule rule::initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy){
-    rule res;
-    res.name = name;
-    res.description = description;
-    res.regex = regex;
-    res.maxEntropy = maxEntropy;
-    res.minEntropy = minEntropy;
+std::shared_ptr<rule::rule> rule::initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy){
+    std::shared_ptr<rule> res;
+    res.get()->name = name;
+    res.get()->description = description;
+    res.get()->regex = regex;
+    res.get()->maxEntropy = maxEntropy;
+    res.get()->minEntropy = minEntropy;
     return res;
 }
 
-void rule::printRule(rule rule){
+void rule::printRule(std::shared_ptr<rule> rule_ptr){
     std::cout 
-        << "[" << rule.name << "] : " << rule.description << "\n"
-        << " - regex : " << rule.regex << "\n"
-        << " - maxEntropy : " << rule.maxEntropy << "\n"
-        << " - minEntropy : " << rule.minEntropy << "\n";
+        << "[" << rule_ptr.get()->name << "] : " << rule_ptr.get()->description << "\n"
+        << " - regex : " << rule_ptr.get()->regex << "\n"
+        << " - maxEntropy : " << rule_ptr.get()->maxEntropy << "\n"
+        << " - minEntropy : " << rule_ptr.get()->minEntropy << "\n";
 }

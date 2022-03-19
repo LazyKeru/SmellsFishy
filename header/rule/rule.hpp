@@ -3,6 +3,7 @@
 /************************/
 #include <string>
 #include <iostream>
+#include <memory>
 /************************/
 /**     Functions      **/
 /************************/
@@ -28,10 +29,10 @@ namespace rule
      * @param minEntropy 
      * @return rule 
      */
-    rule initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy);
+    std::shared_ptr<rule> initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy);
     /**
      * @brief Simply print the rule.
      * 
      */
-    void printRule(rule);
+    void printRule(std::shared_ptr<rule>);
 } // namespace rule

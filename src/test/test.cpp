@@ -26,7 +26,17 @@ int main(int argc, const char* argv[])
 				return -1;
 			}
 			std::cout << "Entropy is working";
-			return 0;
+		}
+		if (s == "struct" || s == "all") {
+			std::cout << "Testing struct...\n";
+			bool res = test::structure();
+			if(res==false){
+				std::cout << "Error: struct functions seems to be broken";
+				throw;
+				// Safeguard
+				return -1;
+			}
+			std::cout << "Structures is working";
 		}
 	}
 }

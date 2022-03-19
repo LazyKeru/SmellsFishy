@@ -1,5 +1,12 @@
 #pragma once
-
+/************************/
+/**      Includes      **/
+/************************/
+#include <string>
+#include <iostream>
+/************************/
+/**     Functions      **/
+/************************/
 namespace test
 {
     /**
@@ -23,4 +30,11 @@ namespace test
      * @return false 
      */
     bool entropy();
+    /**
+     * @brief Test function for the secret and rule functions and structures
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool structure();
 }
