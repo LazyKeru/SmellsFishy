@@ -6,14 +6,14 @@
 #include <cmath>
 #include <memory>
 #include <iostream>
-#include "../rule/rule.hpp"
+#include "./rule.hpp"
 /************************/
 /**     Functions      **/
 /************************/
 namespace secret
 {
     /**
-     * @brief Struct of a detected secret, for the secrets detected in a specific file
+     * @brief Struct of a detected secret
      * 
      */
     typedef struct secret
@@ -26,9 +26,10 @@ namespace secret
     /**
      * @brief Create a secret
      * 
+     * @param rule_ptr shared_ptr to the broken rule
      * @param matchedRegex The string which matched the regex rule
      * @param lineNumbre The line number in the file
-     * @param entropy The entropy
+     * @param entropy The entropy of the matchedRegex
      * @return secret 
      */
     secret initSecret(std::shared_ptr<rule::rule> rule_ptr, std::string matchedRegex, int lineNumbre, double entropy = -1);
@@ -42,7 +43,7 @@ namespace secret
     /**
      * @brief Print info in the console about the secret
      * 
-     * @param secret 
+     * @param secret the secret we want to print
      */
-    void printSecret(secret secret);
+    void printSecret(const secret & secret);
 } // namespace secret

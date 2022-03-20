@@ -1,4 +1,4 @@
-#include "../../header/secret/secret.hpp"
+#include "../../header/struct/secret.hpp"
 
 secret::secret secret::initSecret(std::shared_ptr<rule::rule> rule_ptr, std::string matchedRegex, int lineNumbre, double entropy){
         secret res;
@@ -13,7 +13,7 @@ void secret::setSecretEntropy(secret *secret, double newEntropy){
     secret->entropy = newEntropy;
 }
 
-void secret::printSecret(secret secret){
+void secret::printSecret(const secret & secret){
     std::cout 
         << "[Detected Secret] " << secret.matchedRegex << "\n"
         << " - Broken rule : " << secret.rule_ptr.get()->name << "\n"

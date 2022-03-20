@@ -1,4 +1,4 @@
-#include "../../header/rule/rule.hpp"
+#include "../../header/struct/rule.hpp"
 
 std::shared_ptr<rule::rule> rule::initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy){
     std::cout << "[Structure - Rule] log: start initRule\n";
@@ -11,7 +11,7 @@ std::shared_ptr<rule::rule> rule::initRule(std::string name, std::string descrip
     return res;
 }
 
-void rule::printRule(std::shared_ptr<rule> rule_ptr){
+void rule::printRule(const std::shared_ptr<rule> & rule_ptr){
     std::cout 
         << "[" << rule_ptr.get()->name << "] : " << rule_ptr.get()->description << "\n"
         << " - regex : " << rule_ptr.get()->regex << "\n"

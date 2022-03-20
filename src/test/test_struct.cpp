@@ -1,5 +1,5 @@
 #include "../../header/test/test.hpp"
-#include "../../header/secret/secret.hpp"
+#include "../../header/struct/secretsPerFile.hpp"
 /**
  * @brief To be written
  * 
@@ -9,6 +9,9 @@
 
 bool test::structure()
 {
+    /********************/
+    /*       RULE       */
+    /********************/
     std::cout << "[Structure - Rule] log: testing initRule\n";
     std::shared_ptr<rule::rule> _rule = rule::initRule(
         "Good rule",
@@ -41,6 +44,9 @@ bool test::structure()
     /* END - Testing initRule */
     std::cout << "[Structure - Rule] log: initRule is working\n";
     rule::printRule(_rule);
+    /********************/
+    /*      SECRET      */
+    /********************/
     std::cout << "[Structure - Secret] log: testing initSecret\n";
     secret::secret _test = secret::initSecret(
         _rule,
@@ -93,6 +99,43 @@ bool test::structure()
     /* END - Testing initRule */
     std::cout << "[Structure - Secret] log: setSecretEntropy is working\n";
     secret::printSecret(_test);
+    /********************/
+    /* SECRETS PER FILE */
+    /********************/
+    /* START - Testing initRule */
+    std::cout << "[Structure - SecretPerFile] log: testing initSecretsPerFile\n";
+    secretsPerFile::secretsPerFile _secretsPerFile = secretsPerFile::initSecretsPerFile(
+        "./Awsome/test/at/Douai.html"
+    );
+    if(_secretsPerFile.file_path!="./Awsome/test/at/Douai.html"){
+        std::cout << "[Structure - SecretPerFile] Error: initSecretsPerFile doesn't set the rigth file_path\n";
+        return false;
+    }
+    if(_secretsPerFile.secretList.size()!=0){
+        std::cout << "[Structure - SecretPerFile] Error: initSecretsPerFile doesn't have an empty secretList\n";
+        return false;
+    }
+    std::cout << "[Structure - SecretPerFile] log: initSecretsPerFile is working\n";
+    /* END - Testing initRule */
+    /* START - Testing addSecretPerFile */
+    std::cout << "[Structure - SecretPerFile] log: testing addSecretPerFile\n";
+    secretsPerFile::addSecretPerFile(&_secretsPerFile,_test);
+    if(_secretsPerFile.secretList.size()!=1){
+        std::cout << "[Structure - SecretPerFile] Error: addSecretPerFile doesn't add a secret to the secretList\n";
+        return false;
+    }
+    std::cout << "[Structure - SecretPerFile] log: addSecretPerFile is working\n";
+    /* END - Testing addSecretPerFile */
+    /* START - Testing addSecretPerFile */
+    std::cout << "[Structure - SecretPerFile] log: testing removeSecretPerFile\n";
+    secretsPerFile::removeSecretPerFile(&_secretsPerFile, 0);
+    if(_secretsPerFile.secretList.size()!=0){
+        std::cout << "[Structure - SecretPerFile] Error: removeSecretPerFile doesn't remove a secret to the secretList\n";
+        return false;
+    }
+    std::cout << "[Structure - SecretPerFile] log: removeSecretPerFile is working\n";
+    /* END - Testing addSecretPerFile */
+    secretsPerFile::printSecretsPerFile(_secretsPerFile);
     std::cout << "[Structure] log: all functions and strucutres are working\n";
     return true;
 }
