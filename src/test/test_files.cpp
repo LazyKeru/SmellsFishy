@@ -16,6 +16,7 @@ namespace fs = std::filesystem;
 
 int createTestFiles(const std::string &root, const std::string &stringInFiles)
 {
+
     int numFiles = 0;
     auto condition = []()
     { return randomValue(0u, 10u) < 3; };
@@ -47,7 +48,9 @@ void deleteTestFiles(const std::string &path)
 
 bool test::files()
 {
+    auto f = __FILE__;
     auto root = "../../FilesTest";
+    deleteTestFiles(root);
     auto s = "En informatique, une expression régulière ou expression rationnelle1 ou expression normalenote 1 ou motif est une chaîne de caractères qui décrit,"
              "selon une syntaxe précise, un ensemble de chaînes de caractères possibles. Les expressions régulières sont également appelées regex (un mot-valise formé depuis"
              "l'anglais regular expression). Les expressions rationnelles sont issues des théories mathématiques des langages formels des années 1940. Leur capacité à décrire"
@@ -55,40 +58,45 @@ bool test::files()
              "adoption en informatique. Les expressions régulières sont aujourd’hui utilisées pour programmer des logiciels avec des fonctionnalités de lecture, de contrôle,"
              "de modification, et d'analyse de textes ainsi que dans la manipulation des langues formelles que sont les langages informatiques."
              "Ces expressions régulières ont la qualité de pouvoir être décrites par des formules ou motifs (en anglais patterns) bien plus simples que les autres moyens2.";
-    
-    std::cout << "[TestFiles]log: Loading test env\n";
+
+    test::log("Loading test environment", f);
     auto n = createTestFiles(root, s);
     auto v = Files::readDirRecursive(root);
     bool result = true;
-    std::cout << "[TestFiles]log: loaded test env\n";
+    test::log("loaded test environment", f);
 
-    if(!Files::isDir(root))
-        std::cout << "[TestFiles]Error: The path is not directory\n";
-        return false;
-    
-    std::cout << "[TestFiles]log: The root path is a directory\n";
-
-    if (v.size() != n)
-        std::cout << "[TestFiles]Error: No all the wanted files where detected\n";
+    if (!Files::isDir(root))
+    {
+        test::log("The path is not directory", f, test::logType::error);
         result = false;
-    
-    std::cout << "[TestFiles]log: All the wanted files where detected\n";
+    }
+
+    test::log("The root path is a directiry", f);
+    if (v.size() != n)
+    {
+        test::log("Not all the wanted files where detected", f, test::logType::error);
+        result = false;
+    }
+
+    test::log("All the wanted files where detected", f);
 
     // checking only for one out of numberToSkip documents
-    std::cout << "[TestFiles]log: Checking that fileToString works\n";
+    test::log("Checking that fileToString works", f);
     int numberToSkip = 4;
-    for (auto i = 0; i < v.size(); ++i){
-        auto& path = v[i];
+    for (auto i = 0; i < v.size(); ++i)
+    {
+        auto &path = v[i];
         auto fts = Files::fileToString(path);
-        if (i % numberToSkip == 0 && fts != s){
-            std::cout << "[TestFiles]Error: error the string in the file, doesn't look like the one we have\n";
+        if (i % numberToSkip == 0 && fts != s)
+        {
+            test::log("error the string in the file, doesn't look like the one we have", f, test::logType::error);
             result = false;
             break;
         }
     }
-    std::cout << "[TestFiles]log: The fileToString works\n";
-        
+    test::log("The fileToString works", f);
+
     deleteTestFiles(root);
-    std::cout << "[TestFiles]log: the files functions are working correctly\n";
+    test::log("the files functions are working correctly", f);
     return result;
 }
