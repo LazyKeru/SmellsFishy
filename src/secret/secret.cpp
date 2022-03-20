@@ -15,9 +15,9 @@ void secret::setSecretEntropy(secret *secret, double newEntropy){
 
 void secret::printSecret(secret secret){
     std::cout 
-        << "[Detected Secret] " << secret.matchedRegex
-        << " - Borken rule : " << secret.rule_ptr.get()->name 
-        << " - lineNumber : " << secret.lineNumbre 
-        << " - entropy : " << secret.entropy;
+        << "[Detected Secret] " << secret.matchedRegex << "\n"
+        << " - Broken rule : " << secret.rule_ptr.get()->name << "\n"
+        << " - lineNumber : " << secret.lineNumbre << "\n"
+        << " - entropy : " << secret.entropy << "\n";
 }
 
