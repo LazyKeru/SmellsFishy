@@ -5,34 +5,42 @@
 #include <iostream>
 #include <memory>
 /************************/
-/**     Functions      **/
+/**       Struct       **/
 /************************/
-namespace rule
+/**
+ * @brief The structure for a rule (used to detect secrets)
+ *
+ */
+struct Rule
 {
+    //// Static Methods ////
     /**
-     * @brief The structure for a rule (used to detect secrets)
-     * 
+     * @brief Construct a new Rule object
      */
-    typedef struct rule
-    {   
-        std::string name;
-        std::string description;
-        std::string regex;
-        double maxEntropy;
-        double minEntropy;
-    }rule;
+    static std::shared_ptr<Rule> getRuleSharedPtr(const Rule &r);
+    
+
+    //// Methods ////
     /**
-     * @brief init a rule
-     * 
+     * @brief Construct a new Rule object
+     *
      * @param regex regex of the rule
      * @param maxEntropy max entropy it shouldn't go over
      * @param minEntropy min entropy it shouldn't go under default 0
-     * @return rule 
+     * @return rule
      */
-    std::shared_ptr<rule> initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy = 0);
+    Rule(const std::string &name, const std::string &description, const std::string &regex, double maxEntropy, double minEntropy = 0);
+
     /**
-     * @brief Simply print the rule.
-     * 
+     * @brief prints the rule
      */
-    void printRule(const std::shared_ptr<rule> & rule_ptr);
-} // namespace rule
+    void print() const;
+
+
+    //// Variables ////
+    std::string name;
+    std::string description;
+    std::string regex;
+    double maxEntropy;
+    double minEntropy;
+};

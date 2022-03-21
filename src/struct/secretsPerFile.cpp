@@ -1,21 +1,47 @@
-#include "../../header/struct/secretsPerFile.hpp"
+#include "../../header/struct/SecretsPerFile.hpp"
 
-secretsPerFile::secretsPerFile secretsPerFile::initSecretsPerFile(std::string file_path){
-    secretsPerFile res;
-    res.file_path = file_path;
-    return res;
+SecretsPerFile::SecretsPerFile() 
+{
+}
+
+SecretsPerFile::SecretsPerFile(const std::string& filePath) :
+    file_path(filePath)
+{
+}
+
+void SecretsPerFile::init(const std::string &filePath)
+{
+    file_path = filePath;
 };
 
-void secretsPerFile::addSecretPerFile(secretsPerFile * secretsPerFile, secret::secret secret){
-    secretsPerFile->secretList.push_back(secret);
+void SecretsPerFile::addSecret(const Secret &secret)
+{
+    secretList.push_back(secret);
 }
 
-void secretsPerFile::removeSecretPerFile(secretsPerFile * secretsPerFile, int index){
-    secretsPerFile->secretList.erase(secretsPerFile->secretList.begin() + index);
+void SecretsPerFile::removeSecret(int index)
+{
+    secretList.erase(secretList.begin() + index);
 }
 
-void secretsPerFile::printSecretsPerFile(const secretsPerFile & secretsPerFile){
-    std::cout 
-        << "[SecretPerFile] path: " << secretsPerFile.file_path << "\n"
-        << " - number of secrets : " << secretsPerFile.secretList.size() << "\n";
+void SecretsPerFile::print()
+{
+    std::cout
+        << "[SecretPerFile] path: " << file_path << "\n"
+        << " - number of secrets : " << secretList.size() << "\n";
+}
+
+const Secret &SecretsPerFile::operator[](int index) const
+{
+    return secretList[index];
+}
+
+std::vector<Secret>::const_iterator SecretsPerFile::begin()
+{
+    return secretList.begin();
+}
+
+std::vector<Secret>::const_iterator SecretsPerFile::end()
+{
+    return secretList.end();
 }
