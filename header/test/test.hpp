@@ -9,20 +9,20 @@
 /************************/
 namespace test
 {
+    enum class logType
+    {
+        message,
+        warning,
+        error
+    };
+    void log(const std::string &messge, const std::string &filePath = "", logType log_type = logType::message);
     /**
      * @brief Test function for the regex functions
      * 
      * @return true 
      * @return false 
      */
-	bool regex();
-    /**
-     * @brief Test function for the fileToString functions
-     * 
-     * @return true 
-     * @return false 
-     */
-    bool fileToString();
+    bool regex();
     /**
      * @brief Test function for the entropy functions
      * 
@@ -37,4 +37,11 @@ namespace test
      * @return false 
      */
     bool structure();
+    /*
+     * @brief Test function for the files related functions
+     *
+     * @return true
+     * @return false
+     */
+    bool files();
 }
