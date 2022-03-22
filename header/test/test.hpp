@@ -7,22 +7,30 @@
 /************************/
 /**     Functions      **/
 /************************/
+
 namespace test
 {
+    enum class logType
+    {
+        message,
+        warning,
+        error
+    };
+    void log(const std::string &messge, const std::string &filePath = "", logType log_type = logType::message);
     /**
      * @brief Test function for the regex functions
      * 
      * @return true 
      * @return false 
      */
-	bool regex();
+    bool regex();
     /**
-     * @brief Test function for the fileToString functions
-     * 
-     * @return true 
-     * @return false 
+     * @brief Test function for the fileToString function
+     *
+     * @return true
+     * @return false
      */
-    bool fileToString();
+    bool files();
     /**
      * @brief Test function for the entropy functions
      * 
