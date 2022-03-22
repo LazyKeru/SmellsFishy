@@ -1,5 +1,5 @@
-#include <iostream>
 #include "../../header/test/test.hpp"
+#include <iostream>
 
 void test::log(const std::string &message, const std::string &filePath, logType log_type)
 {
@@ -30,27 +30,35 @@ int main(int argc, const char *argv[])
 	{
 		std::string s(argv[i]);
 
-		if (s == "all")
-		{
-			test::log("Testing all...");
-			test::regex();
-			test::files();
-
-			return 0;
-		}
-		else if (s == "regex")
-		{
-			test::log("Testing regex...");;
+		if (s == "regex" || s == "all") {
+			std::cout << "[Regex] Log: Testing regex...\n";
 			test::regex();
 		}
-		else if (s == "entropy")
-		{
-			test::log("Testing entropy...\n");
-		}
-		else if (s == "files")
-		{
-			test::log("Testing file_read...\n");
+		if (s == "files" || s == "all") {
+			std::cout << "[File Read] Log: Testing file_read...\n";
 			test::files();
+		}
+		if (s == "entropy" || s == "all") {
+			std::cout << "[Entropy] Log: Testing entropy...\n";
+			bool res = test::entropy();
+			if(res==false){
+				std::cout << "[Entropy] Error: Entropy function seems to be broken";
+				throw;
+				// Safeguard
+				return -1;
+			}
+			std::cout << "[Entropy] Log: Entropy is working";
+		}
+		if (s == "struct" || s == "all") {
+			std::cout << "[Structure] Log: Testing struct...\n";
+			bool res = test::structure();
+			if(res==false){
+				std::cout << "[Structure] Error: struct functions seems to be broken";
+				throw;
+				// Safeguard
+				return -1;
+			}
+			std::cout << "[Structure] Log: Structures is working";
 		}
 	}
 }

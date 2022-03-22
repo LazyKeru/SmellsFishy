@@ -1,5 +1,12 @@
 #pragma once
+/************************/
+/**      Includes      **/
+/************************/
 #include <string>
+#include <iostream>
+/************************/
+/**     Functions      **/
+/************************/
 
 namespace test
 {
@@ -11,10 +18,10 @@ namespace test
     };
     void log(const std::string &messge, const std::string &filePath = "", logType log_type = logType::message);
     /**
-     * @brief Test function for the regex function
-     *
-     * @return true
-     * @return false
+     * @brief Test function for the regex functions
+     * 
+     * @return true 
+     * @return false 
      */
     bool regex();
     /**
@@ -24,4 +31,18 @@ namespace test
      * @return false
      */
     bool files();
+    /**
+     * @brief Test function for the entropy functions
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool entropy();
+    /**
+     * @brief Test function for the secret and rule functions and structures
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool structure();
 }
