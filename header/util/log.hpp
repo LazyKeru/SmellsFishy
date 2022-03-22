@@ -24,6 +24,9 @@ namespace Log
 }
 
 #define INIT_LOG                                                          \
-    static Log::CustomLog log_msg(std::clog, __FILE__, "   Message:  ");  \
-    static Log::CustomLog log_warn(std::clog, __FILE__, " < Warning > "); \
-    static Log::CustomLog log_err(std::clog, __FILE__, "<<< ERROR >>>");
+    namespace Log                                                         \
+    {                                                                     \
+        static CustomLog msg(std::clog, __FILE__, "   Message:  ");  \
+        static CustomLog warn(std::clog, __FILE__, " < Warning > "); \
+        static CustomLog err(std::clog, __FILE__, "<<< ERROR >>>");  \
+    }
