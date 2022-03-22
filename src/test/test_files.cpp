@@ -13,7 +13,7 @@
  * @return false
  */
 namespace fs = std::filesystem;
-
+INIT_LOG
 int createTestFiles(const std::string &root, const std::string &stringInFiles)
 {
 
@@ -59,29 +59,29 @@ bool test::files()
              "de modification, et d'analyse de textes ainsi que dans la manipulation des langues formelles que sont les langages informatiques."
              "Ces expressions régulières ont la qualité de pouvoir être décrites par des formules ou motifs (en anglais patterns) bien plus simples que les autres moyens2.";
 
-    test::log("Loading test environment", f);
+    Log::msg << "Loading test environment\n";
     auto n = createTestFiles(root, s);
     auto v = Files::readDirRecursive(root);
     bool result = true;
-    test::log("loaded test environment", f);
+    Log::msg << "loaded test environment\n";
 
     if (!Files::isDir(root))
     {
-        test::log("The path is not directory", f, test::logType::error);
+        Log::err << "The path is not directory\n";
         result = false;
     }
 
-    test::log("The root path is a directiry", f);
+    Log::msg << "The root path is a directiry\n";
     if (v.size() != n)
     {
-        test::log("Not all the wanted files where detected", f, test::logType::error);
+        Log::err << "Not all the wanted files where detected\n";
         result = false;
     }
 
-    test::log("All the wanted files where detected", f);
+    Log::msg << "All the wanted files where detected\n";
 
     // checking only for one out of numberToSkip documents
-    test::log("Checking that fileToString works", f);
+    Log::msg << "Checking that fileToString works\n";
     int numberToSkip = 4;
     for (auto i = 0; i < v.size(); ++i)
     {
@@ -89,14 +89,14 @@ bool test::files()
         auto fts = Files::fileToString(path);
         if (i % numberToSkip == 0 && fts != s)
         {
-            test::log("error the string in the file, doesn't look like the one we have", f, test::logType::error);
+            Log::err << "error the string in the file, doesn't look like the one we have\n";
             result = false;
             break;
         }
     }
-    test::log("The fileToString works", f);
+    Log::msg << "The fileToString works\n";
 
     deleteTestFiles(root);
-    test::log("the files functions are working correctly", f);
+    Log::msg << "the files functions are working correctly\n";
     return result;
 }

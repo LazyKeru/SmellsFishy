@@ -10,19 +10,6 @@
 /************************/
 namespace test
 {
-    enum class logType
-    {
-        message,
-        warning,
-        error
-    };
-    void log(const std::string &messge, const std::string &filePath = "", logType log_type = logType::message);
-    /**
-     * @brief Test function for the regex functions
-     * 
-     * @return true 
-     * @return false 
-     */
     bool regex();
     /**
      * @brief Test function for the entropy functions
