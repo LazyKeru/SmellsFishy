@@ -6,52 +6,59 @@
 #include <iostream>
 #include "./secret.hpp"
 /************************/
-/**     Functions      **/
+/**       Struct       **/
 /************************/
-namespace secretsPerFile
+/**
+ * @brief Class of a detected secrets in a file
+ *
+ */
+struct SecretsPerFile
 {
+    //// Methods ////
+
     /**
-     * @brief Struct of a detected secrets in a file
-     * 
+     * @brief Construct a new Secrets Per File object
      */
-    typedef struct secretsPerFile
-    {
-        std::string file_path;
-        std::vector<secret::secret> secretList;
-    }secretsPerFile;
+    SecretsPerFile();
+
+    /**
+     * @brief Construct a new Secrets Per File object
+     * 
+     * @param filePath path of the analyzed file
+     */
+    SecretsPerFile(const std::string& filePath);
     /**
      * @brief init secretPerFile struct
-     * 
-     * @param file_path path of the analyzed file
-     * @return secretPerFile 
+     * @param filePath path of the analyzed file
+     * @return secretPerFile
      */
-    secretsPerFile initSecretsPerFile(
-        std::string file_path
-    );
+    void init(const std::string &filePath);
+
     /**
      * @brief add secret to the secretList in the secretPerFile struct
-     * 
-     * @param secretPerFile the struct secretPerFile for which we want to add a secret
      * @param secret the secret we want to add
      */
-    void addSecretPerFile(
-        secretsPerFile * secretsPerFile, 
-        secret::secret secret
-    );
+    void addSecret(const Secret &secret);
+
     /**
      * @brief remove secret from secretList in the secretPerFile struct
-     * 
-     * @param secretPerFile the struct secretPerFile for which we want to remove a secret
      * @param index the index of the we want to remove. As it will simply be used in a loop
      */
-    void removeSecretPerFile(
-        secretsPerFile * secretsPerFile,
-        int index
-    );
+    void removeSecret(int index);
+
     /**
      * @brief print the detail of the secretPerFile struct
-     * 
      * @param secretsPerFile the struct secretPerFile we want to get info from
      */
-    void printSecretsPerFile(const secretsPerFile & secretsPerFile);
-} // namespace secret
+    void print();
+
+    // for-loop related functions
+    const Secret& operator[](int index) const;
+    std::vector<Secret>::const_iterator begin();
+    std::vector<Secret>::const_iterator end();
+
+
+    //// Variables ////
+    std::string file_path;
+    std::vector<Secret> secretList;
+};

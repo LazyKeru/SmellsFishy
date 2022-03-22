@@ -1,20 +1,20 @@
 #include "../../header/struct/rule.hpp"
 
-std::shared_ptr<rule::rule> rule::initRule(std::string name, std::string description, std::string regex, double maxEntropy, double minEntropy){
-    std::cout << "[Structure - Rule] log: start initRule\n";
-    auto res = std::shared_ptr<rule>(new rule);
-    res->name = name;
-    res->description = description;;
-    res->regex = regex;
-    res->maxEntropy = maxEntropy;
-    res->minEntropy = minEntropy;
-    return res;
+std::shared_ptr<Rule> Rule::getRuleSharedPtr(const Rule &r)
+{
+    return std::make_shared<Rule>(r);
 }
 
-void rule::printRule(const std::shared_ptr<rule> & rule_ptr){
+Rule::Rule(const std::string& name, const std::string& description, const std::string& regex, double maxEntropy, double minEntropy) :
+    name(name), description(description), regex(regex), maxEntropy(maxEntropy), minEntropy(minEntropy)
+{
+}
+
+void Rule::print() const
+{
     std::cout 
-        << "[" << rule_ptr.get()->name << "] : " << rule_ptr.get()->description << "\n"
-        << " - regex : " << rule_ptr.get()->regex << "\n"
-        << " - maxEntropy : " << rule_ptr.get()->maxEntropy << "\n"
-        << " - minEntropy : " << rule_ptr.get()->minEntropy << "\n";
+        << "[" << name << "] : " << description << "\n"
+        << " - regex : " << regex << "\n"
+        << " - maxEntropy : " << maxEntropy << "\n"
+        << " - minEntropy : " << minEntropy << "\n";
 }
