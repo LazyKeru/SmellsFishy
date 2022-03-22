@@ -1,4 +1,4 @@
-#include "../../header/struct/Secret.hpp"
+#include "../../header/struct/secret.hpp"
 
 Secret::Secret() : lineNumber(-1), entropy(-1.0)
 {
