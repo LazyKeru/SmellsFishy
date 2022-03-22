@@ -4,6 +4,7 @@
 /************************/
 #include <string>
 #include <iostream>
+#include "../util/log.hpp"
 /************************/
 /**     Functions      **/
 /************************/
