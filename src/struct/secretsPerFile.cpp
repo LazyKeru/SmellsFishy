@@ -1,4 +1,4 @@
-#include "../../header/struct/SecretsPerFile.hpp"
+#include "../../header/struct/secretsPerFile.hpp"
 
 SecretsPerFile::SecretsPerFile() 
 {

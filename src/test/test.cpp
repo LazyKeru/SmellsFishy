@@ -1,31 +1,11 @@
 #include "../../header/test/test.hpp"
 #include <iostream>
 
-void test::log(const std::string &message, const std::string &filePath, logType log_type)
-{
-	if (!filePath.empty())
-	{
-		auto start = filePath.find_last_of('/') + 1, end = filePath.size();
-		std::string fileName;
-		if (end > start)
-		{
-			auto fileName = filePath.substr(start, end - start);
-			std::cerr << '[' << fileName << "] ";
-		}
-	}
-	if (log_type == logType::error)
-		std::cerr << "<<< ERROR >>> \t";
-	else if (log_type == logType::warning)
-		std::cerr << " < Warning >  \t";
-	else if (log_type == logType::message)
-		std::cerr << "   Message:   \t";
-
-	std::cerr << message << std::endl;
-}
+INIT_LOG
 
 int main(int argc, const char *argv[])
 {
-	test::log("Starting test...");
+	Log::msg << "Starting test...\n";
 	for (size_t i = 0; i < argc; i++)
 	{
 		std::string s(argv[i]);
@@ -60,5 +40,7 @@ int main(int argc, const char *argv[])
 			}
 			std::cout << "[Structure] Log: Structures is working";
 		}
+		if(s=="all")
+			break;
 	}
 }

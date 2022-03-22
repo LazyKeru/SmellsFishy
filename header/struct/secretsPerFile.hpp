@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "./secret.hpp"
+#include "secret.hpp"
 /************************/
 /**       Struct       **/
 /************************/
