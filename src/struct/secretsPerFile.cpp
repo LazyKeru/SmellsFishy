@@ -1,4 +1,7 @@
 #include "../../header/struct/secretsPerFile.hpp"
+#include "../../header/util/log.hpp"
+
+INIT_LOG
 
 SecretsPerFile::SecretsPerFile() 
 {
@@ -26,7 +29,7 @@ void SecretsPerFile::removeSecret(int index)
 
 void SecretsPerFile::print()
 {
-    std::cout
+    Log::msg
         << "[SecretPerFile] path: " << file_path << "\n"
         << " - number of secrets : " << secretList.size() << "\n";
 }
