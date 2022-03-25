@@ -26,3 +26,5 @@ T randomValue(T min, T max)
     static std::mt19937 generator;
     return distribution(generator);
 }
+
+static const double not_a_number = std::nan("1");
