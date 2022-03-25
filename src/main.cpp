@@ -4,6 +4,9 @@
 #include "../header/files/readDir.hpp"
 #include "../header/core/core.hpp"
 #include <vector>
+#include "../header/files/json.hpp"
+#include "../header/struct/rule.hpp"
+#include "../header/struct/secretsPerFile.hpp"
 
 /**
  * @brief 
