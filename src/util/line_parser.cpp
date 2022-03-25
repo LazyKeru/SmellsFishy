@@ -37,8 +37,13 @@ void Line_parser::find_argument(Argument * argument, char *argv[], int argc){
         //missing input
         return;
     }
+    // if(current[0]=="-"){
+    //     //missing input
+    //     return;
+    // }
     current = argv[ptr];
     argument->value = current;
+    argument->defined = true;
 }
 /**
  * @brief Check for all the arguments
@@ -52,4 +57,32 @@ void Line_parser::check_arguments(std::vector<Argument> * arguments, char *argv[
     {
         find_argument(&arguments->at(i), argv, argc);
     }
+}
+/**
+ * @brief 
+ * 
+ * @param arguments 
+ * @param argc 
+ * @return true 
+ * @return false 
+ */
+bool Line_parser::ammountArguments(std::vector<Argument> * arguments, int argc){
+    int count = 0;
+    for (int i = 0; i < arguments->size(); i++)
+    {
+        if (arguments->at(i).defined)
+        {
+            // An argument is needed
+            ++count;
+            if (arguments->at(i).needInput)
+            {
+                // An argument is needed
+                ++count;
+            }
+        }
+    }
+    if(count == argc-1){
+        return true;
+    }
+    return false;
 }

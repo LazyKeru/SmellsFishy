@@ -26,4 +26,13 @@ namespace Line_parser
      * @param argc 
      */
     void check_arguments(std::vector<Argument> * argument, char *argv[], int argc);
+    /**
+     * @brief 
+     * 
+     * @param arguments 
+     * @param argc 
+     * @return true 
+     * @return false 
+     */
+    bool ammountArguments(std::vector<Argument> * arguments, int argc);
 } // namespace Line_parser
