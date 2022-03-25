@@ -1,7 +1,7 @@
 #include "../../header/test/test.hpp"
 #include "../../header/entropy/entropy.hpp"
 #include <iostream>
-
+INIT_LOG
 /**
  * @brief To be written
  * 
@@ -19,19 +19,19 @@ bool test::entropy()
 {
     std::string test_string = PHRASE;
     double test_entropy = Entropy::entropy(test_string);
-    std::cout << "[Entropy] Log: The entropy of '" << PHRASE << "' is " << test_entropy << "\n";
+    Log::msg << "The entropy of '" << PHRASE << "' is " << test_entropy << "\n";
     /* Testing if we obtained the correct entropy */
     if(std::round(EXPECTED_VALUE * 100) == std::round(test_entropy * 100)){
-        std::cout << "[Entropy] Error: it wasn't the expected value\n";
+        Log::err << "it wasn't the expected value\n";
         return false;
     }
-    std::cout << "[Entropy] Log: It is the expected value\n";
-    std::cout << "[Entropy] Log: Running stringFitEntropy, which should return true\n";
+    Log::msg << "It is the expected value\n";
+    Log::msg << "Running stringFitEntropy, which should return true\n";
     if(Entropy::stringFitEntropy(test_string, EXPECTED_VALUE - 0.01, EXPECTED_VALUE + 0.01) != true){
-        std::cout << "[Entropy] Error: It was suppose to fit\n";
+        Log::err << "It was suppose to fit\n";
         return false;
     }
-    std::cout << "[Entropy] Log: it did return true\n";
+    Log::msg << "it did return true\n";
     /* Testing the stringFitEntropy function. Should work without a problem */
     return true;
 }
