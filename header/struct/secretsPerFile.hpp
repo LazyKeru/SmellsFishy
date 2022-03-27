@@ -1,3 +1,5 @@
+#pragma once
+
 /************************/
 /**      Includes      **/
 /************************/
@@ -23,10 +25,10 @@ struct SecretsPerFile
 
     /**
      * @brief Construct a new Secrets Per File object
-     * 
+     *
      * @param filePath path of the analyzed file
      */
-    SecretsPerFile(const std::string& filePath);
+    SecretsPerFile(const std::string &filePath);
     /**
      * @brief init secretPerFile struct
      * @param filePath path of the analyzed file
@@ -52,11 +54,12 @@ struct SecretsPerFile
      */
     void print();
 
-    // for-loop related functions
-    const Secret& operator[](int index) const;
-    std::vector<Secret>::const_iterator begin();
-    std::vector<Secret>::const_iterator end();
+    void reserve(size_t newSize) { secretList.reserve(newSize); }
 
+    // for-loop related functions
+    const Secret &operator[](int index) const;
+    std::vector<Secret>::const_iterator begin() const;
+    std::vector<Secret>::const_iterator end() const;
 
     //// Variables ////
     std::string file_path;

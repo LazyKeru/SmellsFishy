@@ -1,3 +1,5 @@
+#pragma once
+
 /************************/
 /**      Includes      **/
 /************************/
@@ -37,7 +39,7 @@ struct Secret
     /**
      * @brief Prints the secret
      */
-    void print();
+    void print() const;
 
     //// Variables ////
     std::shared_ptr<Rule> rulePtr;

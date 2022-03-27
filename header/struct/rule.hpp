@@ -32,7 +32,7 @@ struct Rule
      * @return rule
      */
     Rule(const std::string &name, const std::string &description, const std::string &regex, double maxEntropy, double minEntropy = 0);
-
+    Rule() {}
     /**
      * @brief prints the rule
      */

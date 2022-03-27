@@ -12,7 +12,7 @@ INIT_LOG
 /**************************/
 /* CONST                  */
 /**************************/
-constexpr char* PHRASE = "This is an outrageous test";
+#define PHRASE "This is an outrageous test"
 constexpr double EXPECTED_VALUE = 3.51;
 
 bool test::entropy()

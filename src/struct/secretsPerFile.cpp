@@ -39,12 +39,12 @@ const Secret &SecretsPerFile::operator[](int index) const
     return secretList[index];
 }
 
-std::vector<Secret>::const_iterator SecretsPerFile::begin()
+std::vector<Secret>::const_iterator SecretsPerFile::begin() const
 {
     return secretList.begin();
 }
 
-std::vector<Secret>::const_iterator SecretsPerFile::end()
+std::vector<Secret>::const_iterator SecretsPerFile::end() const
 {
     return secretList.end();
 }
