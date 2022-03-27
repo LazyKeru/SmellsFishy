@@ -8,8 +8,12 @@ INIT_LOG
 
 bool test::core()
 {
-    std::ofstream out("log.txt");
+    std::string outFile("log.txt");
+    std::ofstream out(outFile);
+    Log::msg << "Loading JSON file...\n";
     JSON json(R"(C:\Users\Eloi\Desktop\Projets\SmellsFishy\SmellsFishy\resources\rgx_list.json)");
+
+    Log::msg << "Preparing environment...\n";
     auto root = "../../FilesTest";
     test::deleteTestFiles(root);
     auto s = "En informatique, une expression régulière ou expression rationnelle1 ou expression normalenote 1 ou motif est une chaîne de caractères qui décrit,"
@@ -22,19 +26,45 @@ bool test::core()
     test::createTestFiles(root, s);
     auto test = "-----BEGIN PRIVATE KEY-----";
 
+    Log::msg << "Test files created \n";
+
+    Log::msg << "Adding paths...\n";
     Core::addPath(root);
     Core::addPath("C:/Users/Eloi/Desktop/Projets/SmellsFishy/SmellsFishy/src/test/test_core.cpp");
+    Log::msg << "Adding rules...\n";
+
     Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("PKCS8 private key")));
     Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1.0}));
     Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)", 1.0}));
+
+    Log::msg << "Finding all secrets\n";
     auto secrets(Core::getAllSecrets());
+
+    if (secrets.size() == 0)
+    {
+        Log::err << "No secrets found!\n";
+        return false;
+    }
+
+    Log::msg << "Storing secrets in a file...\n";
     for (const auto &scts : secrets)
     {
         out << "\n\n\t\tTESTING FILE " << scts.file_path << "\n\n";
         for (const auto &sct : scts)
             out << sct.rulePtr->description << "\t" << sct.matchedRegex << '\n';
     }
+
+    Log::msg << "Deleting test files\n";
     test::deleteTestFiles(root);
+    out.close();
+    
+    if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 78000u)
+    {
+        Log::err << "Something's wrong with the file!\n";
+        return false;
+    }
+    std::filesystem::remove(outFile);
+    Log::msg << "Everything working normally\n";
 
     return true;
 }

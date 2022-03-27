@@ -9,26 +9,43 @@ class Core
 {
 public:
     Core(const Core &) = delete;
+    /**
+     * @brief Get the All Secrets objects
+     * @return const std::vector<SecretsPerFile>& 
+     */
     static const std::vector<SecretsPerFile> &getAllSecrets()
     {
         return instance._impl_getAllSecrets();
     }
+
+    /**
+     * @brief adds a rule to the existing ones
+     */
     static void addRule(std::shared_ptr<Rule> ruleToAdd)
     {
         instance._impl_addRule(ruleToAdd);
     }
+
+    /**
+     * @brief removes the rule that has the name you give
+     */
     static void removeRule(const std::string &ruleName)
     {
         instance._impl_removeRule(ruleName);
     }
-    static void f()
-    {
-        instance._impl_f();
-    }
+    
+    /**
+     * @brief adds a path to the pathList. Can be file or directory
+     */
     static void addPath(const std::string &newPath)
     {
         instance._impl_addPath(newPath);
     }
+
+    /**
+     * @brief remove the path you give from the pathList
+     * 
+     */
     static void removePath(const std::string &pathToRemove)
     {
         instance._impl_removePath(pathToRemove);
@@ -41,32 +58,11 @@ private: // Singleton related
     void _impl_addPath(const std::string &newPath);
     void _impl_removePath(const std::string &newPath);
 
-    void _impl_f();
     Core();
     static Core instance;
 
-public:
-    // class CoreThread
-    // {
-    // public:
-    //     CoreThread(const std::map<std::string, std::shared_ptr<Rule>>& r);
-    //     ~CoreThread();
-    //     void find(const std::string &path);
-    //     void join() { thread->join(); }
-    //     const SecretsPerFile &getSecrets() const { return secrets; }
-    //     bool isDone() { return done; }
-
-    //     std::function<void(const std::string&)> threadFunction;
-    // private:
-    //     bool done;
-    //     SecretsPerFile secrets;
-    //     std::thread* thread;
-    //     const std::map<std::string, std::shared_ptr<Rule>> &rules;
-    // };
-
-private: // Attributs
+private: // Attributes
     std::map<std::string, std::shared_ptr<Rule>> rules;
     std::list<std::string> paths;
     std::vector<SecretsPerFile> secrets;
-    // std::vector<CoreThread> threads;
 };

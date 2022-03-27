@@ -66,14 +66,6 @@ void Core::_impl_removeRule(const std::string &ruleName)
 	rules.erase(ruleName);
 }
 
-void Core::_impl_f()
-{
-	for (const auto &r : rules)
-		r.second->print();
-	for (const auto &p : paths)
-		std::cout << p << std::endl;
-}
-
 void Core::_impl_addPath(const std::string &newPath)
 {
 	paths.push_back(newPath);
@@ -86,34 +78,3 @@ void Core::_impl_removePath(const std::string &pathToRemove)
 Core::Core()
 {
 }
-
-// Core::CoreThread::CoreThread(const std::map<std::string, std::shared_ptr<Rule>> &r) : rules(r), done(true), thread(nullptr)
-// {
-// 	threadFunction = [this](const std::string &path)
-// 	{
-// 		std::cout << std::this_thread::get_id() << "begin";
-// 		const auto fileString = Files::fileToString(path);
-// 		for (const auto &[rulename, rule] : rules)
-// 		{
-// 			auto allFoundStrings = Regex::findAll(rule->regex, fileString);
-// 			std::cout << "found" << allFoundStrings.size() << '\n';
-// 			secrets.reserve(allFoundStrings.size());
-// 			for (const auto &secretString : allFoundStrings)
-// 				secrets.addSecret(Secret(rule, secretString, -1));
-// 		}
-// 		std::cout << std::this_thread::get_id() << "end";
-// 	};
-// }
-
-// Core::CoreThread::~CoreThread()
-// {
-// 	delete thread;
-// }
-
-// void Core::CoreThread::find(const std::string &path)
-// {
-// 	done = false;
-// 	delete thread;
-// 	thread = new std::thread(&threamdFunction, path);
-// 	done = true;
-// }
