@@ -8,10 +8,15 @@
 class Core
 {
 public:
+    static void help();
+    static void usage();
+    static void warning();
+    static void analyze(std::string dir, std::string rules);
+
     Core(const Core &) = delete;
     /**
      * @brief Get the All Secrets objects
-     * @return const std::vector<SecretsPerFile>& 
+     * @return const std::vector<SecretsPerFile>&
      */
     static const std::vector<SecretsPerFile> &getAllSecrets()
     {
@@ -33,7 +38,7 @@ public:
     {
         instance._impl_removeRule(ruleName);
     }
-    
+
     /**
      * @brief adds a path to the pathList. Can be file or directory
      */
@@ -44,7 +49,7 @@ public:
 
     /**
      * @brief remove the path you give from the pathList
-     * 
+     *
      */
     static void removePath(const std::string &pathToRemove)
     {
@@ -66,3 +71,4 @@ private: // Attributes
     std::list<std::string> paths;
     std::vector<SecretsPerFile> secrets;
 };
+
