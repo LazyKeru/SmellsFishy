@@ -1,5 +1,10 @@
 #pragma once
+/************************/
+/**      Includes      **/
+/************************/
 #include "../struct/secretsPerFile.hpp"
+#include "../files/readDir.hpp"
+#include "../util/log.hpp"
 #include <map>
 #include <list>
 #include <thread>

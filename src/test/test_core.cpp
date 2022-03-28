@@ -4,6 +4,7 @@
 #include "../../header/struct/secret.hpp"
 #include <fstream>
 
+
 INIT_LOG
 
 bool test::core()
