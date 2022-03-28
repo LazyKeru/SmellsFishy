@@ -12,7 +12,7 @@ bool test::core()
     std::string outFile("log.txt");
     std::ofstream out(outFile);
     Log::msg << "Loading JSON file...\n";
-    JSON json(R"(C:\Users\Eloi\Desktop\Projets\SmellsFishy\SmellsFishy\resources\rgx_list.json)");
+    JSON json(R"(.\resources\rgx_list.json)");
 
     Log::msg << "Preparing environment...\n";
     auto root = "../../FilesTest";
@@ -62,6 +62,7 @@ bool test::core()
     if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 78000u)
     {
         Log::err << "Something's wrong with the file!\n";
+        std::filesystem::remove(outFile);
         return false;
     }
     std::filesystem::remove(outFile);
