@@ -15,9 +15,3 @@ void Core::usage(){
         << "main.exe [--help/-h] [--dir/-d <path>] [--rules/-r <path>]\n";
     return;
 }
-
-void Core::warning(){
-    std::cout 
-        << "Wrong usage of the executable\n";
-    return;
-}

@@ -1,6 +1,7 @@
 #include "../../header/core/core.hpp"
 #include "../../header/files/readDir.hpp"
 #include "../../header/regex/regex.hpp"
+#include "../../header/entropy/entropy.hpp"
 #include "../../header/files/fileToString.hpp"
 #include <functional>
 #include <future>
@@ -53,6 +54,38 @@ const std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 			secrets.push_back(results[k].get());
 	}
 
+	return secrets;
+}
+
+const std::vector<SecretsPerFile> &Core::_impl_checkEntropySecrets()
+{
+	bool _entropy;
+	double _minEntropy;
+	for (size_t i = 0; i < secrets.size(); i++)
+	{
+		for (size_t j = 0; j < secrets[i].secretList.size(); j++)
+		{
+			if(secrets[i].secretList[j].rulePtr->maxEntropy){
+				if(!secrets[i].secretList[j].rulePtr->minEntropy){
+					_minEntropy = 0;
+				}else{
+					_minEntropy = secrets[i].secretList[j].rulePtr->minEntropy;
+				}
+				if(!Entropy::stringFitEntropy(
+					secrets[i].secretList[j].matchedRegex, 
+					secrets[i].secretList[j].rulePtr->maxEntropy, 
+					_minEntropy
+				)){
+					secrets[i].secretList.erase(
+						secrets[i].secretList.begin()
+						+ i
+					);
+					--i;
+				}
+			}
+		}
+		
+	}
 	return secrets;
 }
 
