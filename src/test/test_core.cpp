@@ -25,19 +25,26 @@ bool test::core()
              "de modification, et d'analyse de textes ainsi que dans la manipulation des langues formelles que sont les langages informatiques."
              "Ces expressions régulières ont la qualité de pouvoir être décrites par des formules ou motifs (en anglais patterns) bien plus simples que les autres moyens2.";
     test::createTestFiles(root, s);
-    auto test = "-----BEGIN PRIVATE KEY-----";
+    auto test = "-----BEGIN PRIVATE: KEY-----";
+    auto test2 = "-----BEGIN EC PRIVATE: KEY-----";
 
     Log::msg << "Test files created \n";
 
     Log::msg << "Adding paths...\n";
     Core::addPath(root);
-    Core::addPath("C:/Users/Eloi/Desktop/Projets/SmellsFishy/SmellsFishy/src/test/test_core.cpp");
+    Core::addPath("src/test/test_core.cpp");
     Log::msg << "Adding rules...\n";
 
     Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("PKCS8 private key")));
     Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1.0}));
     Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)", 1.0}));
 
+    Log::msg << "Loading JSON into Core...\n";
+    Core::loadJson(R"(.\resources\rgx_list.json)");
+
+    Log::msg << "Adding rule from the JSON...\n";
+    Core::addRuleFromJSON("SSH (EC) private key");
+    
     Log::msg << "Finding all secrets\n";
     auto secrets(Core::getAllSecrets());
 
@@ -57,6 +64,7 @@ bool test::core()
 
     Log::msg << "Deleting test files\n";
     test::deleteTestFiles(root);
+
     out.close();
     if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 80000u)
     {

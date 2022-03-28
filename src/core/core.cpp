@@ -78,3 +78,14 @@ void Core::_impl_removePath(const std::string &pathToRemove)
 Core::Core()
 {
 }
+
+void Core::_impl_loadJson(const std::string &jsonPath)
+{
+	json = std::make_unique<JSON>(jsonPath);
+}
+
+void Core::_impl_addRuleFromJSON(const std::string &ruleDescription)
+{
+	if (json) // si le pointeur a été initialisé 
+		addRule(std::make_shared<Rule>(json->getRuleFromDescription(ruleDescription)));
+}
