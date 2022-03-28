@@ -34,11 +34,12 @@ bool test::core()
     Log::msg << "Adding rules...\n";
 
     Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("PKCS8 private key")));
-    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1.0}));
-    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)", 1.0}));
+    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1, 0}));
+    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)"}));
 
     Log::msg << "Finding all secrets\n";
     auto secrets(Core::getAllSecrets());
+    secrets = Core::checkEntropySecrets();
 
     if (secrets.size() == 0)
     {
@@ -60,10 +61,10 @@ bool test::core()
     if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 80000u)
     {
         Log::err << "Something's wrong with the file, the size seems out of bound!\n";
-        std::filesystem::remove(outFile);
+        //std::filesystem::remove(outFile);
         return false;
     }
-    std::filesystem::remove(outFile);
+    //std::filesystem::remove(outFile);
     Log::msg << "Everything working normally\n";
 
     return true;

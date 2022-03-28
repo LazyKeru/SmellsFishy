@@ -74,8 +74,8 @@ public:
     }
 
 private: // Singleton related
-    const std::vector<SecretsPerFile> &_impl_getAllSecrets();
-    const std::vector<SecretsPerFile> &_impl_checkEntropySecrets();
+    std::vector<SecretsPerFile> &_impl_getAllSecrets();
+    std::vector<SecretsPerFile> &_impl_checkEntropySecrets();
     void _impl_addRule(std::shared_ptr<Rule> ruleToAdd);
     void _impl_removeRule(const std::string &ruleName);
     void _impl_addPath(const std::string &newPath);

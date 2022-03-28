@@ -25,7 +25,7 @@ static SecretsPerFile threadFunction(std::string path, std::map<std::string, std
 	return secrets;
 }
 
-const std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
+std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 {
 	std::vector<std::string> allPaths;
 	for (const auto &path : paths)
@@ -57,30 +57,23 @@ const std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 	return secrets;
 }
 
-const std::vector<SecretsPerFile> &Core::_impl_checkEntropySecrets()
+std::vector<SecretsPerFile> &Core::_impl_checkEntropySecrets()
 {
-	bool _entropy;
-	double _minEntropy;
-	for (size_t i = 0; i < secrets.size(); i++)
+	for (int i = 0; i < (int) secrets.size(); i++)
 	{
-		for (size_t j = 0; j < secrets[i].secretList.size(); j++)
+		for (int j = 0; j < (int) secrets[i].secretList.size(); j++)
 		{
-			if(secrets[i].secretList[j].rulePtr->maxEntropy){
-				if(!secrets[i].secretList[j].rulePtr->minEntropy){
-					_minEntropy = 0;
-				}else{
-					_minEntropy = secrets[i].secretList[j].rulePtr->minEntropy;
-				}
+			if(secrets[i].secretList[j].rulePtr->maxEntropy != -1){
 				if(!Entropy::stringFitEntropy(
 					secrets[i].secretList[j].matchedRegex, 
-					secrets[i].secretList[j].rulePtr->maxEntropy, 
-					_minEntropy
+					secrets[i].secretList[j].rulePtr->minEntropy, 
+					secrets[i].secretList[j].rulePtr->maxEntropy
 				)){
+					std::cout << "Entropy: " << Entropy::entropy(secrets[i].secretList[j].matchedRegex) << "\n";
 					secrets[i].secretList.erase(
-						secrets[i].secretList.begin()
-						+ i
+						secrets[i].secretList.begin() + j
 					);
-					--i;
+					--j;
 				}
 			}
 		}
