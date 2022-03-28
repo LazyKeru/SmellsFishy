@@ -58,10 +58,9 @@ bool test::core()
     Log::msg << "Deleting test files\n";
     test::deleteTestFiles(root);
     out.close();
-    
-    if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 78000u)
+    if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 80000u)
     {
-        Log::err << "Something's wrong with the file!\n";
+        Log::err << "Something's wrong with the file, the size seems out of bound!\n";
         std::filesystem::remove(outFile);
         return false;
     }
