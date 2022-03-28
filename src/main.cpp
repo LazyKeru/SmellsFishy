@@ -8,6 +8,8 @@
 #include "../header/struct/rule.hpp"
 #include "../header/struct/secretsPerFile.hpp"
 #include "../header/core/core.hpp"
+#include <fstream>
+#include <iostream>
 
 /**
  * @brief 
@@ -64,14 +66,36 @@ int main(int argc, char *argv[])
         Core::help();
         return 0;
     }
-    if(!Files::isDir(_Arguments[RULES_I].value)){
-        // Missing arg error
-        Core::warning();
-        Core::help();
-        return 0;
-    }
+    /** NEED TO ADD A CHECK FOR JSON EXTENSION **/
+    // if(!Files::isDir(_Arguments[RULES_I].value)){
+    //     // Missing arg error
+    //     Core::warning();
+    //     Core::help();
+    //     return;
+    // }
     if(_Arguments[DIR_I].defined && _Arguments[RULES_I].defined){
-        // Missing arg error
+        /** FOR THE LOG **/
+        std::string outFile("log.txt");
+        std::ofstream out(outFile);
+        /** ASSIGNING THE ARGS **/
+        std::string rules = _Arguments[RULES_I].value;
+        std::string dir = _Arguments[DIR_I].value;
+        /** EXECUTING THE *future* FUNCTION **/
+        JSON json(rules);
+        Core::addPath(dir);
+        Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("GitHub OAuth Access Token")));
+        auto secrets(Core::getAllSecrets());
+        if (secrets.size() == 0)
+        {
+            std::cout << "No secrets found!\n";
+            return 0;
+        }
+        for (const auto &scts : secrets)
+        {
+            out << "\n\n\t\tTESTING FILE " << scts.file_path << "\n\n";
+            for (const auto &sct : scts)
+                out << sct.rulePtr->description << "\t" << sct.matchedRegex << "\t" << sct.lineNumber << '\n' ;
+        }
         return 0;
     }
     return 0;

@@ -31,7 +31,6 @@ bool test::core()
 
     Log::msg << "Adding paths...\n";
     Core::addPath(root);
-    Core::addPath("C:/Users/Eloi/Desktop/Projets/SmellsFishy/SmellsFishy/src/test/test_core.cpp");
     Log::msg << "Adding rules...\n";
 
     Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("PKCS8 private key")));
