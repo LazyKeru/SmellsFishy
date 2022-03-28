@@ -1,5 +1,8 @@
 #include "../../header/core/core.hpp"
 
+
+INIT_LOG
+
 void Core::analyze(std::string dir, std::string rules){
     /*-------------------------------------------*/
     /**  Check if dir and rules are directory   **/

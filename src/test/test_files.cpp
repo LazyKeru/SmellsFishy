@@ -14,7 +14,7 @@
  */
 namespace fs = std::filesystem;
 INIT_LOG
-int createTestFiles(const std::string &root, const std::string &stringInFiles)
+int test::createTestFiles(const std::string &root, const std::string &stringInFiles)
 {
 
     int numFiles = 0;
@@ -41,7 +41,7 @@ int createTestFiles(const std::string &root, const std::string &stringInFiles)
     return numFiles;
 }
 
-void deleteTestFiles(const std::string &path)
+void test::deleteTestFiles(const std::string &path)
 {
     fs::remove_all(path);
 }
@@ -50,7 +50,7 @@ bool test::files()
 {
     auto f = __FILE__;
     auto root = "../../FilesTest";
-    deleteTestFiles(root);
+    test::deleteTestFiles(root);
     auto s = "En informatique, une expression régulière ou expression rationnelle1 ou expression normalenote 1 ou motif est une chaîne de caractères qui décrit,"
              "selon une syntaxe précise, un ensemble de chaînes de caractères possibles. Les expressions régulières sont également appelées regex (un mot-valise formé depuis"
              "l'anglais regular expression). Les expressions rationnelles sont issues des théories mathématiques des langages formels des années 1940. Leur capacité à décrire"
@@ -60,7 +60,7 @@ bool test::files()
              "Ces expressions régulières ont la qualité de pouvoir être décrites par des formules ou motifs (en anglais patterns) bien plus simples que les autres moyens2.";
 
     Log::msg << "Loading test environment\n";
-    auto n = createTestFiles(root, s);
+    auto n = test::createTestFiles(root, s);
     auto v = Files::readDirRecursive(root);
     bool result = true;
     Log::msg << "loaded test environment\n";

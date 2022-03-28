@@ -13,16 +13,16 @@ namespace test
     bool regex();
     /**
      * @brief Test function for the entropy functions
-     * 
-     * @return true 
-     * @return false 
+     *
+     * @return true
+     * @return false
      */
     bool entropy();
     /**
      * @brief Test function for the secret and rule functions and structures
-     * 
-     * @return true 
-     * @return false 
+     *
+     * @return true
+     * @return false
      */
     bool structure();
     /*
@@ -32,4 +32,10 @@ namespace test
      * @return false
      */
     bool files();
+
+    bool core();
+
+    int createTestFiles(const std::string &root, const std::string &stringInFiles);
+        void deleteTestFiles(const std::string &path);
+
 }

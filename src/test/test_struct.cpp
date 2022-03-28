@@ -1,6 +1,6 @@
 #include "../../header/test/test.hpp"
 #include "../../header/struct/secretsPerFile.hpp"
-
+#include "../../header/struct/secret.hpp"
 INIT_LOG
 
 /**

@@ -7,6 +7,7 @@
 #include "../header/files/json.hpp"
 #include "../header/struct/rule.hpp"
 #include "../header/struct/secretsPerFile.hpp"
+#include "../header/core/core.hpp"
 
 /**
  * @brief 

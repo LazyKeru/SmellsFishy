@@ -17,7 +17,8 @@ Rule::Rule(const std::string& _name, const std::string& _description, const std:
 void Rule::print() const
 {
     Log::msg 
-        << "[" << name << "] : " << description << "\n"
+        << "\n - name : " << name << '\n' 
+        << " - description : " << description << '\n'
         << " - regex : " << regex << "\n"
         << " - maxEntropy : " << maxEntropy << "\n"
         << " - minEntropy : " << minEntropy << "\n";

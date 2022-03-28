@@ -12,7 +12,7 @@ Secret::Secret(std::shared_ptr<Rule> rule_ptr, std::string matched_regex, int li
 {
 }
 
-void Secret::print()
+void Secret::print() const
 {
     Log::msg 
         << "[Detected Secret] " << matchedRegex << "\n"

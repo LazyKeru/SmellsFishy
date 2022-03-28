@@ -1,4 +1,7 @@
-#include "../external/json_lib.hpp"
+#pragma once
+/************************/
+/**      Includes      **/
+/************************/#include "../external/json_lib.hpp"
 #include "../struct/rule.hpp"
 
 class JSON
