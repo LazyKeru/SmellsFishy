@@ -3,15 +3,22 @@
 
 INIT_LOG
 
-bool Core::analyze(const Argument &dir, const Argument &rules){
+bool Core::analyze(const Argument &dir, const Argument &rules, const Argument &entropy){
     /** ASSIGNING THE ARGS **/
     std::string _rules = rules.value;
     std::string _dir = dir.value;
     /** EXECUTING THE *future* FUNCTION **/
     JSON json(_rules);
     Core::addPath(_dir);
-    Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("GitHub OAuth Access Token")));
+    /** Futur function to fetch all rules **/
+    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "gho_[0-9a-zA-Z]{36}", 6, 1}));
+    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "gho_[0-9a-zA-Z]{36}"}));
+    /** Futur function to fetch all rules **/
     auto secrets(Core::getAllSecrets());
+    if(entropy.defined)
+    {
+        secrets = Core::checkEntropySecrets();
+    }
     if (secrets.size() == 0)
     {
         std::cout << "No secrets found!\n";

@@ -5,7 +5,8 @@ INIT_LOG
 const int HELP_I = 0;
 const int DIR_I = 1;
 const int RULES_I = 2;
-const int LOG_I = 3;
+const int ENTROPY_I = 3;
+const int LOG_I = 4;
 static std::vector<Argument> _Arguments = {
     {
         false,
@@ -21,6 +22,11 @@ static std::vector<Argument> _Arguments = {
         true,
         (std::string) "--rules",
         (std::string) "-r"
+    },
+    {
+        false,
+        (std::string) "--entropy",
+        (std::string) "-e"
     },
     {
         true,
@@ -68,7 +74,7 @@ void Core::arg(int argc, char *argv[]){
     //     return;
     // }
     if(_Arguments[DIR_I].defined && _Arguments[RULES_I].defined){
-        analyze(_Arguments[DIR_I], _Arguments[RULES_I]);
+        analyze(_Arguments[DIR_I], _Arguments[RULES_I], _Arguments[ENTROPY_I]);
         if(_Arguments[LOG_I].defined){
             log_output(_Arguments[LOG_I]);
         }

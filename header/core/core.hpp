@@ -20,7 +20,7 @@ public:
     static void help();
     static void usage();
     static void warning();
-    static bool analyze(const Argument &dir, const Argument &rules);
+    static bool analyze(const Argument &dir, const Argument &rules, const Argument &entropy);
     static void arg(int argc, char *argv[]);
 
     Core(const Core &) = delete;
