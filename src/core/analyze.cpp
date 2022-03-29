@@ -1,5 +1,4 @@
 #include "../../header/core/core.hpp"
-#include <fstream>
 
 INIT_LOG
 
