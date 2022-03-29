@@ -11,6 +11,8 @@
 #include <thread>
 #include <functional>
 
+#define SINGLE_CORE 0
+
 class Core
 {
 public:
@@ -20,7 +22,10 @@ public:
     static void analyze(std::string dir, std::string rules);
 
     Core(const Core &) = delete;
-
+    static void loadAllRulesFromJSON()
+    {
+        instance._impl_loadAllRulesFromJSON();
+    }
     /**
      * @brief adds a rule tu the rule set
      * 
@@ -88,7 +93,7 @@ private: // Singleton related
     void _impl_removePath(const std::string &newPath);
     void _impl_loadJson(const std::string& jsonPath);
     void _impl_addRuleFromJSON(const std::string& ruleDescription);
-
+    void _impl_loadAllRulesFromJSON();
     Core();
     static Core instance;
 
