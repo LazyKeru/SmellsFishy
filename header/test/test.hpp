@@ -32,7 +32,12 @@ namespace test
      * @return false
      */
     bool files();
-
+    /*
+     * @brief Test function for the core related functions
+     *
+     * @return true
+     * @return false
+     */
     bool core();
 
     int createTestFiles(const std::string &root, const std::string &stringInFiles);
