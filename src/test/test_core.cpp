@@ -25,7 +25,6 @@ bool test::core()
              "de modification, et d'analyse de textes ainsi que dans la manipulation des langues formelles que sont les langages informatiques."
              "Ces expressions régulières ont la qualité de pouvoir être décrites par des formules ou motifs (en anglais patterns) bien plus simples que les autres moyens2.";
     test::createTestFiles(root, s);
-    auto test = "-----BEGIN PRIVATE KEY-----";
 
     Log::msg << "Test files created \n";
 

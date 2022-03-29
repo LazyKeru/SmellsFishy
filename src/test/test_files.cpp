@@ -24,7 +24,7 @@ int test::createTestFiles(const std::string &root, const std::string &stringInFi
     {
         auto depth = randomValue(0u, 6u);
         auto s = root;
-        for (auto j = 0; j < depth; j++)
+        for (unsigned int j = 0; j < depth; j++)
             s += std::string("/") + randomValue('A', 'F');
         if (fs::create_directories(s))
         {
@@ -48,7 +48,6 @@ void test::deleteTestFiles(const std::string &path)
 
 bool test::files()
 {
-    auto f = __FILE__;
     auto root = "../../FilesTest";
     test::deleteTestFiles(root);
     auto s = "En informatique, une expression régulière ou expression rationnelle1 ou expression normalenote 1 ou motif est une chaîne de caractères qui décrit,"
@@ -72,7 +71,7 @@ bool test::files()
     }
 
     Log::msg << "The root path is a directiry\n";
-    if (v.size() != n)
+    if ( v.size() != (std::string::size_type) n)
     {
         Log::err << "Not all the wanted files where detected\n";
         result = false;
@@ -83,7 +82,7 @@ bool test::files()
     // checking only for one out of numberToSkip documents
     Log::msg << "Checking that fileToString works\n";
     int numberToSkip = 4;
-    for (auto i = 0; i < v.size(); ++i)
+    for (std::string::size_type i = 0; i < v.size(); ++i)
     {
         auto &path = v[i];
         auto fts = Files::fileToString(path);

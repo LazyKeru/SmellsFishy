@@ -30,7 +30,7 @@ int JSON::getIndexWhereRuleEquals(const std::string &field, const std::string &c
 {
     auto rules = json["rules"];
 
-    for (int i = 0; i < rules.size(); i++)
+    for (std::string::size_type i = 0; i < rules.size(); i++)
     {
         std::string s = rules[i][field];
         if (s == condition)

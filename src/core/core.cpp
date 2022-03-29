@@ -41,17 +41,17 @@ std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 	}
 	secrets.reserve(allPaths.size());
 	std::vector<std::future<SecretsPerFile>> results(std::thread::hardware_concurrency());
-	for (int i = 0; i < allPaths.size(); i++)
+	for (std::string::size_type i = 0; i < allPaths.size(); i++)
 	{
-		int j = 0;
+		std::string::size_type j = 0;
 
 		for (; i < allPaths.size() && j < results.size(); i++, j++)
 			results[j] = std::async(std::launch::async, threadFunction, allPaths[i], &rules);
 
-		for (int k = 0; k < j; k++)
+		for (std::string::size_type k = 0; k < j; k++)
 			results[k].wait();
 
-		for (int k = 0; k < j; k++)
+		for (std::string::size_type k = 0; k < j; k++)
 			secrets.push_back(results[k].get());
 	}
 
