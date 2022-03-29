@@ -6,6 +6,20 @@ JSON::JSON(const std::string &jsonPath) : json(nlohmann::json::parse(Files::file
 {
 }
 
+std::vector<Rule> JSON::getAllRulesFromJSON()
+{
+    std::vector<Rule> vec;
+    vec.reserve(json["rules"].size());
+
+    for (const auto &r : json["rules"])
+        vec.push_back(Rule(
+            std::string(r["id"]), std::string(r["description"]),
+            std::string(r["regex"]), not_a_number
+        ));
+
+    return vec;
+}
+
 Rule JSON::getRuleFromDescription(const std::string &description)
 {
     auto rule = json["rules"][getIndexWhereRuleEquals("description", description)];

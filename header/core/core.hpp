@@ -4,6 +4,7 @@
 /************************/
 #include "../struct/secretsPerFile.hpp"
 #include "../files/readDir.hpp"
+#include "../files/json.hpp"
 #include "../util/log.hpp"
 #include "../util/argument.hpp"
 #include "../util/line_parser.hpp"
@@ -13,6 +14,8 @@
 #include <list>
 #include <thread>
 #include <functional>
+
+#define SINGLE_CORE 0
 
 class Core
 {
@@ -24,6 +27,27 @@ public:
     static void arg(int argc, char *argv[]);
 
     Core(const Core &) = delete;
+    static void loadAllRulesFromJSON()
+    {
+        instance._impl_loadAllRulesFromJSON();
+    }
+    /**
+     * @brief adds a rule tu the rule set
+     * 
+     * @param ruleDescription the description of the rule in the json
+     */
+    static void addRuleFromJSON(const std::string& ruleDescription)
+    {
+        instance._impl_addRuleFromJSON(ruleDescription);
+    }
+
+    /**
+     * @brief loads json into core to read rules from it
+     */
+    static void loadJson(const std::string& jsonPath)
+    {
+        instance._impl_loadJson(jsonPath);
+    }
     /**
      * @brief Get the All Secrets objects
      * @return const std::vector<SecretsPerFile>&
@@ -80,11 +104,14 @@ private: // Singleton related
     void _impl_removeRule(const std::string &ruleName);
     void _impl_addPath(const std::string &newPath);
     void _impl_removePath(const std::string &newPath);
-
+    void _impl_loadJson(const std::string& jsonPath);
+    void _impl_addRuleFromJSON(const std::string& ruleDescription);
+    void _impl_loadAllRulesFromJSON();
     Core();
     static Core instance;
 
 private: // Attributes
+    std::unique_ptr<JSON> json;
     std::map<std::string, std::shared_ptr<Rule>> rules;
     std::list<std::string> paths;
     std::vector<SecretsPerFile> secrets;
