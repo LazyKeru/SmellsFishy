@@ -6,7 +6,7 @@ INIT_LOG
 int main(int argc, const char *argv[])
 {
 	Log::msg << "Starting test...\n";
-	for (size_t i = 0; i < argc; i++)
+	for (auto i = 0; i < argc; i++)
 	{
 		std::string s(argv[i]);
 		if (s == "core" || s == "all")

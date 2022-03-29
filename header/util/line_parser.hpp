@@ -13,7 +13,7 @@ namespace Line_parser
     /**
      * @brief Checks if the argument is in the argv, and if their is an input, it will save it
      * 
-     * @param argument the argument we want to find
+     * @param argument The argument we want to find
      * @param argv 
      * @param argc 
      */
@@ -27,7 +27,7 @@ namespace Line_parser
      */
     void check_arguments(std::vector<Argument> * argument, char *argv[], int argc);
     /**
-     * @brief 
+     * @brief Counts the ammount of Arguments
      * 
      * @param arguments 
      * @param argc 

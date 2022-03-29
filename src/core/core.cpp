@@ -3,6 +3,7 @@
 #include "../../header/regex/regex.hpp"
 #include "../../header/entropy/entropy.hpp"
 #include "../../header/files/fileToString.hpp"
+#include "../../header/util/util.hpp"
 #include <functional>
 #include <future>
 
@@ -58,29 +59,32 @@ std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 	results.resize(std::thread::hardware_concurrency());
 #endif
 
-	for (int i = 0; i < allPaths.size(); i++)
+	for (std::string::size_type i = 0; i < allPaths.size(); i++)
 	{
-		int j = 0;
+		std::string::size_type j = 0;
 #if SINGLE_CORE
 		for (; i < allPaths.size(); i++) {
 			results[0] = threadFunction(allPaths[i], &rules);
 			secrets.push_back(results[0]);
 		}
 
+
 #else
 		for (; i < allPaths.size() && j < results.size(); i++, j++)
 			results[j] = std::async(std::launch::async, threadFunction, allPaths[i], &rules);
-		for (int k = 0; k < j; k++)
+
+		for (std::string::size_type k = 0; k < j; k++)
 			results[k].wait();
 
-		for (int k = 0; k < j; k++) {
+		for (std::string::size_type k = 0; k < j; k++) {
 			std::cout << k << ": ";
 			auto res = results[k].get();
 			res.print();
 			std::cout << std::endl;
 
 		}
-		for (int k = 0; k < j; k++)
+		for (std::string::size_type k = 0; k < j; k++)
+
 			secrets.push_back(results[k].get());
 #endif
 	}

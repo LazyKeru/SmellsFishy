@@ -27,8 +27,10 @@ bool test::core()
     
     auto s = "simple string takapte";
     test::createTestFiles(root, s);
+  
     auto test = "-----BEGIN PRIVATE: KEY-----";
     auto test2 = "-----BEGIN EC PRIVATE: KEY-----";
+
 
     Log::msg << "Test files created \n";
 

@@ -53,7 +53,7 @@ void Line_parser::find_argument(Argument * argument, char *argv[], int argc){
  * @param argc 
  */
 void Line_parser::check_arguments(std::vector<Argument> * arguments, char *argv[], int argc){
-    for (int i = 0; i < arguments->size(); i++)
+    for (std::string::size_type i = 0; i < arguments->size(); i++)
     {
         find_argument(&arguments->at(i), argv, argc);
     }
@@ -68,7 +68,7 @@ void Line_parser::check_arguments(std::vector<Argument> * arguments, char *argv[
  */
 bool Line_parser::ammountArguments(std::vector<Argument> * arguments, int argc){
     int count = 0;
-    for (int i = 0; i < arguments->size(); i++)
+    for (std::string::size_type i = 0; i < arguments->size(); i++)
     {
         if (arguments->at(i).defined)
         {

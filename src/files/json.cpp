@@ -31,20 +31,20 @@ Rule JSON::getRuleFromDescription(const std::string &description)
     //        not_a_number, not_a_number);
     return r;
 }
-Rule JSON::getRuleFromName(const std::string &name)
-{
-    return Rule();
-}
-Rule JSON::getRuleFromRegex(const std::string &regex)
-{
-    return Rule();
-}
+// Rule JSON::getRuleFromName(const std::string &name)
+// {
+//     return Rule();
+// }
+// Rule JSON::getRuleFromRegex(const std::string &regex)
+// {
+//     return Rule();
+// }
 
 int JSON::getIndexWhereRuleEquals(const std::string &field, const std::string &condition)
 {
     auto rules = json["rules"];
 
-    for (int i = 0; i < rules.size(); i++)
+    for (std::string::size_type i = 0; i < rules.size(); i++)
     {
         std::string s = rules[i][field];
         if (s == condition)

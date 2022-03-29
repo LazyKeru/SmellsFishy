@@ -30,4 +30,8 @@ T randomValue(T min, T max)
     return distribution(generator);
 }
 
+/**
+ * @brief Const used to determine if our double is defined in our program
+ * 
+ */
 static const double not_a_number = std::nan("1");
