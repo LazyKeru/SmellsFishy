@@ -1,6 +1,7 @@
 #include "../../header/core/core.hpp"
 #include "../../header/files/readDir.hpp"
 #include "../../header/regex/regex.hpp"
+#include "../../header/entropy/entropy.hpp"
 #include "../../header/files/fileToString.hpp"
 #include <functional>
 #include <future>
@@ -33,7 +34,8 @@ static SecretsPerFile threadFunction(std::string path, std::map<std::string, std
 	return secrets;
 }
 
-const std::vector<SecretsPerFile>& Core::_impl_getAllSecrets()
+
+std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 {
 	std::vector<std::string> allPaths;
 	for (const auto& path : paths)
@@ -83,6 +85,30 @@ const std::vector<SecretsPerFile>& Core::_impl_getAllSecrets()
 #endif
 	}
 
+	return secrets;
+}
+
+std::vector<SecretsPerFile> &Core::_impl_checkEntropySecrets()
+{
+	for (int i = 0; i < (int) secrets.size(); i++)
+	{
+		for (int j = 0; j < (int) secrets[i].secretList.size(); j++)
+		{
+			if(secrets[i].secretList[j].rulePtr->maxEntropy != -1){
+				if(!Entropy::stringFitEntropy(
+					secrets[i].secretList[j].matchedRegex, 
+					secrets[i].secretList[j].rulePtr->minEntropy, 
+					secrets[i].secretList[j].rulePtr->maxEntropy
+				)){
+					secrets[i].secretList.erase(
+						secrets[i].secretList.begin() + j
+					);
+					--j;
+				}
+			}
+		}
+		
+	}
 	return secrets;
 }
 

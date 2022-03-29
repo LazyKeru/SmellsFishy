@@ -1,29 +1,49 @@
-# SmellsFishy
+<h1 id="smellsfishy" align="center">SmellsFishy</h1>
+<h3 id="smellsfishy" align="center">A SAST tool, to detect hard coded secrets</h3>
 
-[![release](https://img.shields.io/github/v/tag/LazyKeru/SmellsFishy?style=plastic)](https://github.com/LazyKeru/SmellsFishy/tags)[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+<p align="center">
+    <img src="./doc/img/logo.png" alt="logo">
+</p>
 
-A SAST tool, to detect hard coded secrets. Will be written in C, and use Entropy, Regex and machine learning algorithm for detection.
+<p align="center">
+    <a href="https://github.com/LazyKeru/SmellsFishy/tags">
+        <img src="https://img.shields.io/github/v/tag/LazyKeru/SmellsFishy?style=plastic" alt="release">
+    </a>
+    <a href="https://github.com/semantic-release/semantic-release">
+        <img src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=plastic" alt="semantic-release: angular">
+    </a>
+</p>
 
-## To do list:
+<p>A SAST tool, to detect hard coded secrets. Will be written in C, and use Entropy, Regex and machine learning algorithm for detection.</p>
 
-- [ ] Function to read files
-- [ ] Linked structure to stock all the data
-- [ ] Function to detect regex positive word
-- [ ] Function to check the Entropy of the detected words
-- [ ] Python Machine learning to find a model to check for hard coded secrets
-- [ ] Exporting the best model to C
+<h2 id="how-to-use"> How to use ? </h2>
 
-## Workflow
+<p>To use our tool make sure your computer has <code>Make</code> or <code>Makefile</code>. You will then simply place yourself at the root of the project and enter : </p>
 
-- [![semantic-versionning](https://img.shields.io/github/workflow/status/LazyKeru/SmellsFishy/Semantic-versionning?style=plastic&label=Versionning)](https://github.com/LazyKeru/SmellsFishy/actions/workflows/semantic_versioning.yml)
+<pre><code>makefile main</code></pre>
 
-## Commit convention :
-- BREAKING CHANGE: 
-- build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- ci: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)
-- docs: Documentation only changes
-- feat: A new feature
-- fix: A bug fix
-- perf: A code change that improves performance
-- refactor: A code change that neither fixes a bug nor adds a feature
-- test: Adding missing tests or correcting existing tests
+<p>Then access the executable in the bin folder, and enjoy. The tool is still in beta</p>
+
+<h2 id="workflow">Workflow</h2>
+
+<ul>    
+    <li>
+        <a href="https://github.com/LazyKeru/SmellsFishy/actions/workflows/semantic_versioning.yml">
+            <img src="https://img.shields.io/github/workflow/status/LazyKeru/SmellsFishy/Semantic-versionning?style=plastic&amp;label=Versionning" alt="semantic-versionning">
+        </a>
+    </li>
+</ul>
+
+<h2 id="commit-convention-"> Commit convention </h2>
+
+<ul>
+    <li>BREAKING CHANGE: </li>
+    <li>build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)</li>
+    <li>ci: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)</li>
+    <li>docs: Documentation only changes</li>
+    <li>feat: A new feature</li>
+    <li>fix: A bug fix</li>
+    <li>perf: A code change that improves performance</li>
+    <li>refactor: A code change that neither fixes a bug nor adds a feature</li>
+    <li>test: Adding missing tests or correcting existing tests</li>
+</ul>
