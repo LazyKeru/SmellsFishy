@@ -5,6 +5,7 @@ INIT_LOG
 const int HELP_I = 0;
 const int DIR_I = 1;
 const int RULES_I = 2;
+const int LOG_I = 3;
 static std::vector<Argument> _Arguments = {
     {
         false,
@@ -20,6 +21,11 @@ static std::vector<Argument> _Arguments = {
         true,
         (std::string) "--rules",
         (std::string) "-r"
+    },
+    {
+        true,
+        (std::string) "--log",
+        (std::string) "-l"
     }
 };
 
@@ -63,6 +69,9 @@ void Core::arg(int argc, char *argv[]){
     // }
     if(_Arguments[DIR_I].defined && _Arguments[RULES_I].defined){
         analyze(_Arguments[DIR_I], _Arguments[RULES_I]);
+        if(_Arguments[LOG_I].defined){
+            log_output(_Arguments[LOG_I]);
+        }
         return;
     }
     return;

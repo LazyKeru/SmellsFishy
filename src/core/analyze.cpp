@@ -25,3 +25,7 @@ bool Core::analyze(const Argument &dir, const Argument &rules){
     }
     return false;
 }
+
+void Core::log_output(const Argument &log){
+
+}

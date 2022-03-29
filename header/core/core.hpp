@@ -21,6 +21,7 @@ public:
     static void usage();
     static void warning();
     static bool analyze(const Argument &dir, const Argument &rules);
+    static void log_output(const Argument &log);
     static void arg(int argc, char *argv[]);
 
     Core(const Core &) = delete;
