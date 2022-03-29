@@ -12,7 +12,7 @@ bool test::core()
     std::string outFile("log.txt");
     std::ofstream out(outFile);
     Log::msg << "Loading JSON file...\n";
-    JSON json(R"(C:\Users\Eloi\Desktop\Projets\SmellsFishy\SmellsFishy\resources\rgx_list.json)");
+    JSON json(R"(resources\rgx_list.json)");
 
     Log::msg << "Preparing environment...\n";
     auto root = "../../FilesTest";
@@ -42,7 +42,7 @@ bool test::core()
     Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)", 1.0}));
 
     Log::msg << "Loading JSON into Core...\n";
-    Core::loadJson(R"(C:\Users\Eloi\Desktop\Projets\SmellsFishy\SmellsFishy\resources\rgx_list.json)");
+    Core::loadJson(R"(resources\rgx_list.json)");
 
     Log::msg << "Adding rule from the JSON...\n";
     Core::loadAllRulesFromJSON();
