@@ -24,6 +24,51 @@
 
 <p>Then access the executable in the bin folder, and enjoy. The tool is still in beta</p>
 
+<h3 id="how-to-use"> Arguments </h3>
+
+<table>
+    <thead> 
+        <tr>
+            <th style="text-align:left"> title </th>
+            <th style="text-align:center"> arguments </th>
+            <th style="text-align:center"> example </th>
+            <th style="text-align:left"> description </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align:left"> Help </td>
+            <td style="text-align:center"><code>--help</code>/<code>-h</code></td>
+            <td style="text-align:center"><code>main -h</code></td>
+            <td style="text-align:left">Shows how to use the program</td>
+        </tr>
+        <tr>
+            <td style="text-align:left"> Directory </td>
+            <td style="text-align:center"><code>--dir</code>/<code>-d</code></td>
+            <td style="text-align:center"><code>main -d "path" -r "path.json"</code></td>
+            <td style="text-align:left">Path for the directory you want to analyze</td>
+        </tr>
+        <tr>
+            <td style="text-align:left"> Rules </td>
+            <td style="text-align:center"><code>--rules</code>/<code>-r</code></td>
+            <td style="text-align:center"><code>main -d "path" -r "path.json"</code></td>
+            <td style="text-align:left">Path to the rules json file we need to follow</td>
+        </tr>
+        <tr>
+            <td style="text-align:left"> entropy </td>
+            <td style="text-align:center"><code>--entropy</code>/<code>-e</code></td>
+            <td style="text-align:center"><code>main -d "path" -r "path.json" -e</code></td>
+            <td style="text-align:left">Activates the entropy rules, secrets out of bound from there rules entropy will be removed</td>
+        </tr>
+        <tr>
+            <td style="text-align:left"> Log output </td>
+            <td style="text-align:center"><code>--log</code>/<code>-l</code></td>
+            <td style="text-align:center"><code>main -d "path" -r "path.json" -l "path.txt"</code></td>
+            <td style="text-align:left">Path for the log output</td>
+        </tr>
+    </tbody>
+</table>
+
 <h2 id="workflow">Workflow</h2>
 
 <ul>    
