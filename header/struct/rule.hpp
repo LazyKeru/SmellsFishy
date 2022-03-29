@@ -30,8 +30,7 @@ struct Rule
      * @param minEntropy min entropy it shouldn't go under default 0
      * @return rule
      */
-    Rule(const std::string &name, const std::string &description, const std::string &regex, double maxEntropy, double minEntropy = 0);
-    Rule(const std::string &name, const std::string &description, const std::string &regex);
+    Rule(const std::string &name, const std::string &description, const std::string &regex, double _maxEntropy = (-1), double _minEntropy = (-1));
     /**
      * @brief prints the rule
      */

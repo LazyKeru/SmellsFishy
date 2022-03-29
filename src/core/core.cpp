@@ -3,6 +3,7 @@
 #include "../../header/regex/regex.hpp"
 #include "../../header/entropy/entropy.hpp"
 #include "../../header/files/fileToString.hpp"
+#include "../../header/util/util.hpp"
 #include <functional>
 #include <future>
 
