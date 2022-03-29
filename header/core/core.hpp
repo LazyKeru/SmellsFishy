@@ -21,10 +21,17 @@ public:
     static void usage();
     static void warning();
     static bool analyze(const Argument &dir, const Argument &rules);
-    static void log_output(const Argument &log);
     static void arg(int argc, char *argv[]);
 
     Core(const Core &) = delete;
+    /**
+     * @brief 
+     * 
+     * @param log 
+     */
+    static void log_output(const Argument &log){
+        return instance._impl_logOutput(log.value);
+    };
     /**
      * @brief Get the All Secrets objects
      * @return const std::vector<SecretsPerFile>&
@@ -77,6 +84,7 @@ public:
 private: // Singleton related
     std::vector<SecretsPerFile> &_impl_getAllSecrets();
     std::vector<SecretsPerFile> &_impl_checkEntropySecrets();
+    void _impl_logOutput(const std::string &path);
     void _impl_addRule(std::shared_ptr<Rule> ruleToAdd);
     void _impl_removeRule(const std::string &ruleName);
     void _impl_addPath(const std::string &newPath);

@@ -1,4 +1,5 @@
 #include "../../header/core/core.hpp"
+#include <fstream>
 
 INIT_LOG
 
@@ -26,6 +27,15 @@ bool Core::analyze(const Argument &dir, const Argument &rules){
     return false;
 }
 
-void Core::log_output(const Argument &log){
+void Core::_impl_logOutput(const std::string &path){
+    std::string outFile(path);
+    std::ofstream out(outFile);
+    for (const auto &scts : secrets)
+    {
+        out << "\n\n\t\tANALYZED FILE " << scts.file_path << "\n\n";
+        for (const auto &sct : scts)
+            out << sct.rulePtr->description << "\t" << sct.matchedRegex << '\n';
+    }
+    out.close();
 
 }
