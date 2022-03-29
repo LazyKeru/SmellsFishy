@@ -1,17 +1,27 @@
 #include "../../header/core/core.hpp"
 
-
 INIT_LOG
 
-void Core::analyze(std::string dir, std::string rules){
-    /*-------------------------------------------*/
-    /**  Check if dir and rules are directory   **/
-    /*-------------------------------------------*/
-    if(!Files::isDir(dir)){
-        Log::err << "Dir doesn't exist\n";
+bool Core::analyze(const Argument &dir, const Argument &rules){
+    /** ASSIGNING THE ARGS **/
+    std::string _rules = rules.value;
+    std::string _dir = dir.value;
+    /** EXECUTING THE *future* FUNCTION **/
+    JSON json(_rules);
+    Core::addPath(_dir);
+    Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("GitHub OAuth Access Token")));
+    auto secrets(Core::getAllSecrets());
+    if (secrets.size() == 0)
+    {
+        std::cout << "No secrets found!\n";
+        return true;
     }
-    if(!Files::isDir(rules)){
-        Log::err << "Dir doesn't exist\n";
+    for (const auto &scts : secrets)
+    {
+
+        std::cout << "\n\n\t\tTESTING FILE " << scts.file_path << "\n\n";
+        for (const auto &sct : scts)
+            std::cout << sct.rulePtr->description << "\t" << sct.matchedRegex << "\t" << sct.lineNumber << '\n' ;
     }
-    std::vector<std::string> _filesPath = Files::readDirRecursive(dir);
+    return false;
 }

@@ -5,6 +5,10 @@
 #include "../struct/secretsPerFile.hpp"
 #include "../files/readDir.hpp"
 #include "../util/log.hpp"
+#include "../util/argument.hpp"
+#include "../util/line_parser.hpp"
+#include "../files/json.hpp"
+#include <fstream>
 #include <map>
 #include <list>
 #include <thread>
@@ -16,7 +20,8 @@ public:
     static void help();
     static void usage();
     static void warning();
-    static void analyze(std::string dir, std::string rules);
+    static bool analyze(const Argument &dir, const Argument &rules);
+    static void arg(int argc, char *argv[]);
 
     Core(const Core &) = delete;
     /**
@@ -27,7 +32,14 @@ public:
     {
         return instance._impl_getAllSecrets();
     }
-
+    /**
+     * @brief Get the All Secrets objects
+     * @return const std::vector<SecretsPerFile>&
+     */
+    static const std::vector<SecretsPerFile> &checkEntropySecrets()
+    {
+        return instance._impl_checkEntropySecrets();
+    }
     /**
      * @brief adds a rule to the existing ones
      */
@@ -62,7 +74,8 @@ public:
     }
 
 private: // Singleton related
-    const std::vector<SecretsPerFile> &_impl_getAllSecrets();
+    std::vector<SecretsPerFile> &_impl_getAllSecrets();
+    std::vector<SecretsPerFile> &_impl_checkEntropySecrets();
     void _impl_addRule(std::shared_ptr<Rule> ruleToAdd);
     void _impl_removeRule(const std::string &ruleName);
     void _impl_addPath(const std::string &newPath);

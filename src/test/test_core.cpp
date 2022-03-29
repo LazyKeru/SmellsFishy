@@ -31,15 +31,15 @@ bool test::core()
 
     Log::msg << "Adding paths...\n";
     Core::addPath(root);
-    Core::addPath("C:/Users/Eloi/Desktop/Projets/SmellsFishy/SmellsFishy/src/test/test_core.cpp");
     Log::msg << "Adding rules...\n";
 
     Core::addRule(Rule::getRuleSharedPtr(json.getRuleFromDescription("PKCS8 private key")));
-    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1.0}));
-    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)", 1.0}));
+    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "([r]\\w+)", 1, 0}));
+    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "([A-Z]\\w+)"}));
 
     Log::msg << "Finding all secrets\n";
     auto secrets(Core::getAllSecrets());
+    secrets = Core::checkEntropySecrets();
 
     if (secrets.size() == 0)
     {

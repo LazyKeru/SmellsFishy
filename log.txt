@@ -1,0 +1,2016 @@
+
+
+		TESTING FILE ../../FilesTest\A\A\D\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\A\D\E\file_14.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\A\D\E\file_15.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\A\D\E\file_16.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\C\E\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\C\E\B\file_124.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\C\E\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\E\B\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\E\B\E\file_157.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\E\B\E\file_158.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\E\B\E\file_159.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\A\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\A\E\file_184.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\A\E\file_185.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\A\E\file_186.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\B\B\file_195.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\B\B\file_196.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\C\D\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\C\D\D\file_71.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\C\D\D\file_72.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\C\D\D\file_73.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\D\C\D\D\file_74.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\A\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\A\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\A\D\file_33.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\B\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\B\B\file_3.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\B\B\file_4.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\A\E\E\E\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\A\B\E\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\A\B\E\B\file_213.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\B\A\B\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\B\A\B\E\file_63.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\B\A\B\E\file_64.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\B\file_104.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\B\file_105.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\B\file_106.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\A\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\C\file_21.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\C\file_22.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\D\file_189.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\D\file_190.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\D\C\D\file_191.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\E\B\D\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\E\C\D\file_152.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\E\C\D\file_153.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\B\E\C\D\file_154.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\A\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\A\file_115.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\B\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\B\C\file_136.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\E\A\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\A\E\A\file_169.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\B\C\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\A\B\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\C\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\C\C\file_95.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\C\C\file_96.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\C\C\file_97.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_41.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_42.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_43.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_44.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_45.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\C\C\file_46.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\A\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\A\B\file_36.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\B\B\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\E\file_90.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\D\E\file_91.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\E\D\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\E\D\D\file_131.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\E\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\C\E\E\file_54.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\A\A\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\A\A\C\file_181.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\C\B\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\E\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\E\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\file_27.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\file_28.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\B\file_29.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\C\E\A\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\C\E\A\E\file_101.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\D\C\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\D\C\D\file_51.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\D\E\E\D\A\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\A\B\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\A\C\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\A\D\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\A\D\D\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\B\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\B\B\file_146.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\B\B\file_147.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\B\C\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\B\C\B\file_128.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\B\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\C\C\C\A\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\D\A\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\D\A\C\file_86.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\D\B\C\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\E\B\A\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\E\D\E\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\E\E\D\E\file_68.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
+
+
+		TESTING FILE ../../FilesTest\file_.txt
+
+rule1	re
+rule1	rm
+rule1	rs
+rule1	rs
+rule1	rre
+rule1	rd
+rule1	re
+rule1	re
+rule2	En
+rule2	Les
+rule2	Les
+rule2	Leur
+rule2	Les
+rule2	Ces
