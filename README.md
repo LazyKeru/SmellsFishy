@@ -34,7 +34,7 @@
     </li>
 </ul>
 
-<h2 id="commit-convention-"> Commit convention </h2>`
+<h2 id="commit-convention-"> Commit convention </h2>
 
 <ul>
     <li>BREAKING CHANGE: </li>

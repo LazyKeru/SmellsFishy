@@ -69,7 +69,6 @@ std::vector<SecretsPerFile> &Core::_impl_checkEntropySecrets()
 					secrets[i].secretList[j].rulePtr->minEntropy, 
 					secrets[i].secretList[j].rulePtr->maxEntropy
 				)){
-					std::cout << "Entropy: " << Entropy::entropy(secrets[i].secretList[j].matchedRegex) << "\n";
 					secrets[i].secretList.erase(
 						secrets[i].secretList.begin() + j
 					);

@@ -61,10 +61,10 @@ bool test::core()
     if (std::filesystem::file_size(outFile) < 76000u || std::filesystem::file_size(outFile) > 80000u)
     {
         Log::err << "Something's wrong with the file, the size seems out of bound!\n";
-        //std::filesystem::remove(outFile);
+        std::filesystem::remove(outFile);
         return false;
     }
-    //std::filesystem::remove(outFile);
+    std::filesystem::remove(outFile);
     Log::msg << "Everything working normally\n";
 
     return true;
