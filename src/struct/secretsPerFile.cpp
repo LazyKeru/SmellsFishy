@@ -30,7 +30,7 @@ void SecretsPerFile::removeSecret(int index)
 void SecretsPerFile::print()
 {
     Log::msg
-        << "[SecretPerFile] path: " << file_path << "\n"
+        << "\n - path: " << file_path << "\n"
         << " - number of secrets : " << secretList.size() << "\n";
 }
 
