@@ -39,7 +39,9 @@
     {
       "description": "GitHub OAuth Access Token",
       "id": "github-oauth",
-      "regex": "gho_[0-9a-zA-Z]{36}"
+      "regex": "gho_[0-9a-zA-Z]{36}",
+      "maxEntropy": 6,
+      "minEntropy": 1
     },
     {
       "description": "SSH (DSA) private key",
