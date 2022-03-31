@@ -18,8 +18,9 @@ static SecretsPerFile threadFunction(std::string path, std::map<std::string, std
 	const auto& rules = *r;
 	for (const auto& [rulename, rule] : rules)
 	{
+		std::vector<std::string> allFoundStrings;
 		try {
-			auto allFoundStrings = Regex::findAll(rule->regex, fileString);
+			allFoundStrings = Regex::findAll(rule->regex, fileString);
 		}
 		catch (std::regex_error err) {
 			std::cout << "ERROR WITH THIS RULE" << std::endl;
@@ -72,20 +73,15 @@ std::vector<SecretsPerFile> &Core::_impl_getAllSecrets()
 #else
 		for (; i < allPaths.size() && j < results.size(); i++, j++)
 			results[j] = std::async(std::launch::async, threadFunction, allPaths[i], &rules);
-
 		for (std::string::size_type k = 0; k < j; k++)
 			results[k].wait();
-
 		for (std::string::size_type k = 0; k < j; k++) {
-			std::cout << k << ": ";
+			std::cout << k << ": \n";
 			auto res = results[k].get();
 			res.print();
+			secrets.push_back(res);
 			std::cout << std::endl;
-
 		}
-		for (std::string::size_type k = 0; k < j; k++)
-
-			secrets.push_back(results[k].get());
 #endif
 	}
 

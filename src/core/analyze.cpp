@@ -10,9 +10,11 @@ bool Core::analyze(const Argument &dir, const Argument &rules, const Argument &e
     JSON json(_rules);
     Core::addPath(_dir);
     /** Futur function to fetch all rules **/
-    Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "gho_[0-9a-zA-Z]{36}", 6, 1}));
-    Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "gho_[0-9a-zA-Z]{36}"}));
+    // Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "gho_[0-9a-zA-Z]{36}", 6, 1}));
+    // Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "gho_[0-9a-zA-Z]{36}"}));
     /** Futur function to fetch all rules **/
+    Core::loadJson(rules.value);
+    Core::loadAllRulesFromJSON();
     auto secrets(Core::getAllSecrets());
     if(entropy.defined)
     {
