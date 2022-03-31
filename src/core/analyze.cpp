@@ -9,10 +9,6 @@ bool Core::analyze(const Argument &dir, const Argument &rules, const Argument &e
     /** EXECUTING THE *future* FUNCTION **/
     JSON json(_rules);
     Core::addPath(_dir);
-    /** Futur function to fetch all rules **/
-    // Core::addRule(Rule::getRuleSharedPtr({"r1", "rule1", "gho_[0-9a-zA-Z]{36}", 6, 1}));
-    // Core::addRule(Rule::getRuleSharedPtr({"r2", "rule2", "gho_[0-9a-zA-Z]{36}"}));
-    /** Futur function to fetch all rules **/
     Core::loadJson(rules.value);
     Core::loadAllRulesFromJSON();
     auto secrets(Core::getAllSecrets());
@@ -20,7 +16,7 @@ bool Core::analyze(const Argument &dir, const Argument &rules, const Argument &e
     {
         secrets = Core::checkEntropySecrets();
     }
-    if (secrets.size() == 0)
+    if (secrets.size() != 0)
     {
         std::cout << "No secrets found!\n";
         return true;
@@ -40,9 +36,11 @@ void Core::_impl_logOutput(const std::string &path){
     std::ofstream out(outFile);
     for (const auto &scts : secrets)
     {
-        out << "\n\n\t\tANALYZED FILE " << scts.file_path << "\n\n";
-        for (const auto &sct : scts)
-            out << sct.rulePtr->description << "\t" << sct.matchedRegex << '\n';
+        if(scts.secretList.size() != 0){
+            out << "\n\n\t\tANALYZED FILE " << scts.file_path << "\n\n";
+            for (const auto &sct : scts)
+                out << sct.rulePtr->description << "\t" << sct.matchedRegex << '\n';
+        }
     }
     out.close();
 
