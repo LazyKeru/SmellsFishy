@@ -26,4 +26,12 @@ namespace Files
 	 * its subdirs
 	 */
 	std::vector<std::string> readDirRecursive(const std::string& dirPath, bool includeDirectories = false);
+	/**
+	 * @brief Checks if the file is json
+	 * 
+	 * @param jsonPath
+	 * @return true 
+	 * @return false 
+	 */
+	bool isJson(const std::string &jsonPath);
 }

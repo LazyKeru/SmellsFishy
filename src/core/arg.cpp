@@ -66,13 +66,11 @@ void Core::arg(int argc, char *argv[]){
         help();
         return;
     }
-    /** NEED TO ADD A CHECK FOR JSON EXTENSION **/
-    // if(!Files::isDir(_Arguments[RULES_I].value)){
-    //     // Missing arg error
-    //     Core::warning();
-    //     Core::help();
-    //     return;
-    // }
+    if(!Files::isJson(_Arguments[RULES_I].value)){
+        // Missing arg error
+        Log::warn << "Rules is not a json file";
+        return;
+    }
     if(_Arguments[DIR_I].defined && _Arguments[RULES_I].defined){
         analyze(_Arguments[DIR_I], _Arguments[RULES_I], _Arguments[ENTROPY_I]);
         if(_Arguments[LOG_I].defined){
