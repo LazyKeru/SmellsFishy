@@ -50,7 +50,9 @@ int main(int argc, const char *argv[])
 			}
 			Log::msg << "Structures is working";
 		}
-		if (s == "all")
+		if (s == "all"){
+			Log::msg << "All is working fine";
 			break;
+		}
 	}
 }
