@@ -7,7 +7,6 @@ bool Core::analyze(const Argument &dir, const Argument &rules, const Argument &e
     std::string _rules = rules.value;
     std::string _dir = dir.value;
     /** EXECUTING THE *future* FUNCTION **/
-    JSON json(_rules);
     Core::addPath(_dir);
     Core::loadJson(rules.value);
     Core::loadAllRulesFromJSON();
