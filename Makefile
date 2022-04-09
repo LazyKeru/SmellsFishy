@@ -25,8 +25,8 @@ else
 endif
 
 # Variables for tools
-CXXFLAGS:= -Wall -g -std=c++17
-LDFLAGS:= -Wall -g -std=c++17
+CXXFLAGS:= -Wall -g -std=c++17 -pthread
+LDFLAGS:= -Wall -g -std=c++17 -pthread
 INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
