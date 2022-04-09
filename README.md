@@ -15,6 +15,9 @@
     <a href="https://app.codiga.io/public/project/32693/SmellsFishy/dashboard">
         <img src="https://api.codiga.io/project/32693/status/svg" alt="codiga code grade">
     </a>
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
+    </a>
 </p>
 <p align="center">
     <a href="https://github.com/LazyKeru/SmellsFishy/actions/workflows/semantic_versioning.yml">
