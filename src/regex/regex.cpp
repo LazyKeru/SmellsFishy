@@ -13,7 +13,7 @@ bool Regex::match(const std::string& regex, const std::string& string, MatchFlag
 
 std::vector<std::string> Regex::findAll(const std::string& regex, const std::string& string, MatchFlags flags)
 {
-	std::regex r(regex);
+	std::regex r(regex, std::regex_constants::icase);
 	std::sregex_iterator begin(string.begin(), string.end(), r);
 	std::sregex_iterator end;
 

@@ -7,14 +7,28 @@
 
 <p align="center">
     <a href="https://github.com/LazyKeru/SmellsFishy/tags">
-        <img src="https://img.shields.io/github/v/tag/LazyKeru/SmellsFishy?style=plastic" alt="release">
+        <img src="https://img.shields.io/github/v/tag/LazyKeru/SmellsFishy" alt="release">
     </a>
     <a href="https://github.com/semantic-release/semantic-release">
-        <img src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=plastic" alt="semantic-release: angular">
+        <img src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" alt="semantic-release: angular">
+    </a>
+    <a href="https://app.codiga.io/public/project/32693/SmellsFishy/dashboard">
+        <img src="https://api.codiga.io/project/32693/status/svg" alt="codiga code grade">
+    </a>
+</p>
+<p align="center">
+    <a href="https://github.com/LazyKeru/SmellsFishy/actions/workflows/semantic_versioning.yml">
+        <img src="https://img.shields.io/github/workflow/status/LazyKeru/SmellsFishy/Semantic-versionning?label=Versionning&logo=semantic-release" alt="semantic-versionning">
+    </a>
+    <a href="https://github.com/LazyKeru/SmellsFishy/actions/workflows/test_all.yml">
+        <img src="https://img.shields.io/github/workflow/status/LazyKeru/SmellsFishy/Test-all?label=Test&logo=GitHub-Actions" alt="semantic-versionning">
     </a>
 </p>
 
-<p>A SAST tool, to detect hard coded secrets. Will be written in C, and use Entropy, Regex and machine learning algorithm for detection.</p>
+<p>A Source Code Analysis Tool to detect hard coded secrets. Written in C++, it uses Entropy, Regex and in the future machine learning algorithm for detection.</p>
+
+<p>This is a project started in P6 
+as part of our studies at <a href="https://imt-nord-europe.fr/">IMT Nord Europe</a></p>
 
 <h2 id="how-to-use"> How to use ? </h2>
 
@@ -68,16 +82,6 @@
         </tr>
     </tbody>
 </table>
-
-<h2 id="workflow">Workflow</h2>
-
-<ul>    
-    <li>
-        <a href="https://github.com/LazyKeru/SmellsFishy/actions/workflows/semantic_versioning.yml">
-            <img src="https://img.shields.io/github/workflow/status/LazyKeru/SmellsFishy/Semantic-versionning?style=plastic&amp;label=Versionning" alt="semantic-versionning">
-        </a>
-    </li>
-</ul>
 
 <h2 id="commit-convention-"> Commit convention </h2>
 

@@ -1,4 +1,6 @@
 #include <filesystem>
+#include <iostream>
+#include <fstream>
 #include "../../header/files/readDir.hpp"
 
 namespace fs = std::filesystem;
@@ -6,6 +8,19 @@ namespace fs = std::filesystem;
 bool Files::isDir(const std::string &dirPath)
 {
     return fs::is_directory(dirPath);
+}
+
+bool Files::isJson(const std::string &jsonPath)
+{
+    bool res;
+    if(jsonPath.substr(jsonPath.find_last_of(".") + 1) == "json") {
+        std::cout << "Yes..." << std::endl;
+        res = true;
+    } else {
+        std::cout << "No..." << std::endl;
+        res = false;
+    }
+    return res;
 }
 
 std::vector<std::string> Files::readDir(const std::string &dirPath)
