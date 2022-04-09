@@ -12,7 +12,7 @@ bool test::core()
     std::string outFile("log.txt");
     std::ofstream out(outFile);
     Log::msg << "Loading JSON file...\n";
-    JSON json(R"(C:\Users\killi\OneDrive\Desktop\SmellFishy\SmellsFishy\resources\default.json)");
+    JSON json(R"(.\resources\default.json)");
     Log::msg << "Preparing environment...\n";
     auto root = "../../FilesTest";
     test::deleteTestFiles(root);
