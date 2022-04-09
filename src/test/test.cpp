@@ -9,7 +9,7 @@ int main(int argc, const char *argv[])
 	for (auto i = 0; i < argc; i++)
 	{
 		std::string s(argv[i]);
-		if (s == "core" || s == "all")
+		if (s == "core" || s != "all")
 		{
 			Log::msg << "Testing core...\n";
 			test::core();
