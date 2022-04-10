@@ -8,6 +8,7 @@
 #define INCLUDE_sys_git_credential_h__
 
 #include "../common.h"
+// #include "git2/credential.h"
 
 /**
  * @file git2/sys/cred.h

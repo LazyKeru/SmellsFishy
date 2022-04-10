@@ -28,7 +28,7 @@ endif
 # Variables for tools
 CXXFLAGS:= -Wall -g -std=c++17 -pthread
 LDFLAGS:= -Wall -g -std=c++17 -pthread
-LIBRARY:= -L${LIB_DIR} -llibgit2 
+LIBRARY:= -L${LIB_DIR} -lgit2.lib
 INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
