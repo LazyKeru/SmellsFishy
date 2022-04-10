@@ -12,12 +12,14 @@ on:
 
 jobs:
  release:
-  runs-on: ubuntu-latest
+  runs-on: windows-latest
   steps:
   - name: Checkout
     uses: actions/checkout@v2
     with:
       ref: ${{ secrets.GITHUB_REF }}
+  - name: error
+    run: ld -lgit2 --verbose
   - name: build application
     run: make test
   - name: test all
