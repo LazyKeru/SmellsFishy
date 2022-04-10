@@ -18,6 +18,8 @@ jobs:
     uses: actions/checkout@v2
     with:
       ref: ${{ secrets.GITHUB_REF }}
+  - name: add dependencies
+    run: sudo apt-get install -y libgit2-dev
   - name: build application
     run: make test
   - name: test all
