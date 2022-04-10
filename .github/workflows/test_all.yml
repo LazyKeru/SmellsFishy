@@ -19,7 +19,7 @@ jobs:
     with:
       ref: ${{ secrets.GITHUB_REF }}
   - name: error
-    run: ld -lgit2 --verbose
+    run: ld -L "./lib" -lgit2 --verbose
   - name: build application
     run: make test
   - name: test all
