@@ -53,7 +53,7 @@ int main(int argc, const char *argv[])
 		if (s == "git" || s == "all")
 		{
 			Log::msg << "Testing git functions...\n";
-			bool res = test::structure();
+			bool res = test::git();
 			if (res == false)
 			{
 				Log::msg << "git functions seems to be broken";

@@ -5,11 +5,14 @@
 #include <fstream>
 #include <iostream>
 
-const char* repo = "https://github.com/LazyKeru/SmellsFishy.git";
-const char* path = "./temp/";
+const char* url = "https://github.com/LazyKeru/SmellsFishy.git";
+const char* path = "../temp/";
 
 bool test::git()
 {
-    Git::git_clone(path, repo);
+    git_repository *repo = NULL;
+    Git::git_clone_local(path, url, &repo);
+    Git::git_scan_history(repo);
+    Git::git_clean_local(path, &repo);
     return true;
 }
