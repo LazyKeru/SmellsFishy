@@ -34,10 +34,10 @@ CXX := g++
 LD := g++
 
 test: $(OBJ_SRC_LIST) $(OBJ_TEST_LIST)
-	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) $(LIBRARY) -o $(BIN_DIR)$@
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) $(LIBRARY) $(INCLUDES) -o $(BIN_DIR)$@
 
 main: $(OBJ_SRC_LIST) $(OBJ_MAIN_LIST)
-	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(MAIN_LIST) $(LIBRARY) -o $(BIN_DIR)$@
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(MAIN_LIST) $(LIBRARY) $(INCLUDES) -o $(BIN_DIR)$@
 
 # Compile the cpp files
 ${BUILD_DIR}%.o: ${SRC_DIR}*/%.cpp 
