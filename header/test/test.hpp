@@ -39,7 +39,20 @@ namespace test
      * @return false
      */
     bool core();
-
+    /**
+     * @brief Test function for the git function
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool git();
+    /**
+     * @brief Create a Test Files object
+     * 
+     * @param root 
+     * @param stringInFiles 
+     * @return int 
+     */
     int createTestFiles(const std::string &root, const std::string &stringInFiles);
         void deleteTestFiles(const std::string &path);
 
