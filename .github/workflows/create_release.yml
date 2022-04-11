@@ -27,7 +27,7 @@ jobs:
         ${{ steps.Changelog.outputs.changelog }}
       draft: true
       prerelease: true
- build:
+ build-linux:
   runs-on: ubuntu-20.04
   steps:
   # Checkout the application
@@ -52,7 +52,7 @@ jobs:
       asset_path: ./smellsFishy.zip
       asset_name: smellsFishy_linux.zip
       asset_content_type: application/zip
- build:
+ build-win:
   runs-on: windows-2022
   steps:
   # Checkout the application
