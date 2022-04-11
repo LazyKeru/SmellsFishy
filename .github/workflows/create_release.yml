@@ -1,11 +1,8 @@
 name: Create-Release
 
 on:
-  workflow_dispatch:
-    inputs: 
-      tags:
-        - v0.0.0-test
   push:
+    branches: [ main ]
     # Sequence of tags
     tags:
       - ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
