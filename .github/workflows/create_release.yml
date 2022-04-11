@@ -10,19 +10,10 @@ on:
 
 jobs:
  release:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-20.04
   steps:
-  # Checkout the application
-  - name: Checkout
-    uses: actions/checkout@v2
-    with:
-      ref: ${{ secrets.GITHUB_REF }}
   # Generates a changelog
-  - name: Changelog
-    uses: scottbrenner/generate-changelog-action@master
-    id: Changelog
-    env:
-      REPO: ${{ github.repository }}
+  # Comming soon
   # Create a release
   - name: Create Release
     id: create_release
@@ -36,6 +27,14 @@ jobs:
         ${{ steps.Changelog.outputs.changelog }}
       draft: true
       prerelease: true
+ build-linux:
+  runs-on: ubuntu-20.04
+  steps:
+  # Checkout the application
+  - name: Checkout
+    uses: actions/checkout@v2
+    with:
+      ref: ${{ secrets.GITHUB_REF }}
   # Build the exectuable
   - name: build application
     run: make main
@@ -51,5 +50,30 @@ jobs:
       # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       asset_path: ./smellsFishy.zip
-      asset_name: smellsFishy.zip
+      asset_name: smellsFishy_linux.zip
+      asset_content_type: application/zip
+ build-win:
+  runs-on: windows-2022
+  steps:
+  # Checkout the application
+  - name: Checkout
+    uses: actions/checkout@v2
+    with:
+      ref: ${{ secrets.GITHUB_REF }}
+  # Build the exectuable
+  - name: build application
+    run: make main
+  - name: zip executable
+    run: zip -r smellsFishy.zip --junk-paths ./bin/main README.md
+  # Upload the Assets
+  - name: Upload Release Asset
+    id: upload-release-asset 
+    uses: actions/upload-release-asset@v1
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      asset_path: ./smellsFishy.zip
+      asset_name: smellsFishy_win.zip
       asset_content_type: application/zip
