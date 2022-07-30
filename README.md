@@ -9,14 +9,19 @@
     <a href="https://github.com/LazyKeru/SmellsFishy/tags">
         <img src="https://img.shields.io/github/v/tag/LazyKeru/SmellsFishy" alt="release">
     </a>
-    <a href="https://github.com/semantic-release/semantic-release">
-        <img src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" alt="semantic-release: angular">
-    </a>
     <a href="https://app.codiga.io/public/project/32693/SmellsFishy/dashboard">
         <img src="https://api.codiga.io/project/32693/status/svg" alt="codiga code grade">
     </a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
+    </a>
+</p>
+<p align="center">
+    <a href="https://github.com/semantic-release/semantic-release">
+        <img src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" alt="semantic-release: angular">
+    </a>
+    <a href="https://github.com/libgit2/libgit2">
+        <img src="https://img.shields.io/badge/libgit2-v1.4.2-e10079?logo=libgit2" alt="libgit2: v1.4.2">
     </a>
 </p>
 <p align="center">

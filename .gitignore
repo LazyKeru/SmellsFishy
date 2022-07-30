@@ -6,4 +6,5 @@ bin/*
 *.vcxproj*
 ## Exception
 !build/README.md
+!bin/*.dll
 !bin/README.md

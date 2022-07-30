@@ -50,6 +50,19 @@ int main(int argc, const char *argv[])
 			}
 			Log::msg << "Structures is working";
 		}
+		if (s == "git" || s == "all")
+		{
+			Log::msg << "Testing git functions...\n";
+			bool res = test::git();
+			if (res == false)
+			{
+				Log::msg << "git functions seems to be broken";
+				throw;
+				// Safeguard
+				return -1;
+			}
+			Log::msg << "git functions are working";
+		}
 		if (s == "all"){
 			Log::msg << "All is working fine";
 			break;

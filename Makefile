@@ -4,6 +4,7 @@ INC_DIR := ./header/
 SRC_DIR := ./src/
 BIN_DIR := ./bin/
 BUILD_DIR := ./build/
+LIB_DIR := ./lib/
 
 # Location of cpp files and object list
 ## CPP location
@@ -27,15 +28,16 @@ endif
 # Variables for tools
 CXXFLAGS:= -Wall -g -std=c++17 -pthread
 LDFLAGS:= -Wall -g -std=c++17 -pthread
+LIBRARY:= -L${LIB_DIR} -lgit2
 INCLUDES:= -I${INC_DIR}
 CXX := g++
 LD := g++
 
 test: $(OBJ_SRC_LIST) $(OBJ_TEST_LIST)
-	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) -o $(BIN_DIR)$@
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(OBJ_TEST_LIST) $(LIBRARY) $(INCLUDES) -o $(BIN_DIR)$@
 
 main: $(OBJ_SRC_LIST) $(OBJ_MAIN_LIST)
-	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(MAIN_LIST) -o $(BIN_DIR)$@
+	${LD} $(LDFLAGS) $(OBJ_SRC_LIST) $(MAIN_LIST) $(LIBRARY) $(INCLUDES) -o $(BIN_DIR)$@
 
 # Compile the cpp files
 ${BUILD_DIR}%.o: ${SRC_DIR}*/%.cpp 
